@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP Ticketing System Login</title>
+    <style>
+        body{
+            font-family: "Brooklyn Bold", Arial, "Times New Roman", sans-serif;
+            background-image: url('pupbg3.png');
+            background-size: cover;
+            overflow:hidden;
+            margin:0%
+        }
+        
+        h1{
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(44, 44, 44);
+            text-shadow: 2px 2px rgb(133, 133, 133);
+        }
+        h6{
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 1%;
+        }
+        input{
+            margin-top: 5px;
+            width: 50%;
+            font-size: 30px;
+        }
+        .form-buttons{
+            margin-top: 0%;
+            text-align: center;
+        }
+        
+        
+        #student-button{
+            background-color: rgb(0, 0, 255);
+            color: white;
+            transition-duration: .5s;
+        }
+
+        #student-button:hover{
+            background-color: rgb(0, 0, 109);
+            color:white;
+        }
+        #faculty-button{
+            background-color: rgb(255, 78, 78);
+            color: white;
+            transition-duration: .5s;
+        }
+        #faculty-button:hover{
+            background-color: rgb(141, 1, 1);
+        }
+       
+
+        .form-bg{
+            margin-top: 7%;
+            margin-left: 33%;
+            margin-right: 33%;
+            padding-top: 5px;
+            background-color: rgba(238, 238, 238, 0.692) ;
+            padding-bottom: 130px;
+            border-radius: 5px;
+        }
+        .header{
+            background-color: rgba(255, 255, 255, 0.712);
+            margin-top: 0%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        /* MENU BAR */
+        ul {
+            font-family: "Times New Roman", sans-serif ;
+            font-size: 18px;
+            color:red;
+            list-style-type: none;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            overflow: hidden;
+            background-color: rgba(235, 235, 235, 0.925);
+            
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>&nbsp</li>
+        <li><img src="puplogo.png" width="70"></li><br>
+        <li>&nbsp&nbsp&nbspPOLYTECHNIC UNIVERSITY OF THE PHILIPPINES</li>
+        <br>
+        <li>&nbsp&nbsp&nbspSta. Mesa Manila</li>
+    </ul>
+      
+    <div class="form-bg">
+        <h1>Hi, PUPian!</h1>
+        <h6>↓ Please click or tap your destination </h6>
+        <div class="form-buttons">
+        <form  action="student_login.php">
+            <input id="student-button" type="submit" value="Student"/>
+        </form>
+        <form  action="faculty_login.php">
+            <input id="faculty-button" type="submit" value="Faculty"/>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
