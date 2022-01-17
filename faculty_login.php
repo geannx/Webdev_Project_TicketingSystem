@@ -15,17 +15,20 @@
             height: 100%;
             overflow: hidden;
         }
+
         h1{
             margin-top: 10px;
             text-align: center;
             font-size: 40px;
             font-weight: bold;
         }
+        
         h2{
             font-size: 45px;
             text-align: center;
             font-weight: normal;
         }
+
         .input-form{
             margin: 5% 500px 0% 500px;
             padding-top: 60px;
@@ -34,6 +37,7 @@
             text-align: center;
             border-radius: 10px;
         }
+
         input{
             border-color: rgb(230, 230, 230);
             border-radius: 5px;
@@ -41,22 +45,23 @@
             align-items: center;
             font-size: 30px;
         }
+
         .button{
             border-radius: 10px;
             width: 40%;
         }
     </style>
 </head>
-<body>
-    <div class="input-form">
-    <img src="puplogo.png" alt="pup logo" width="100">
-    <h1>PUP Ticketing System<br>Faculty Login</h1>
-    
-    <form action="" method="POST">
-        <input class="username" id="username" type="text" placeholder="username"><br>
-        <input class="password" id="password" type="text" placeholder="password"><br>
-        <input class = "button"type="submit" value="Login">
-    </form>
-    </div>
-</body>
+    <body>
+        <div class="input-form">
+        <img src="puplogo.png" alt="pup logo" width="100">
+        <h1>PUP Ticketing System<br>Faculty Login</h1>
+        
+        <form action="" method="POST">
+            <input class="username" id="username" type="text" placeholder="username"><br>
+            <input class="password" id="password" type="text" placeholder="password"><br>
+            <input class = "button"type="submit" value="Login">
+        </form>
+        </div>
+    </body>
 </html>
