@@ -1,0 +1,85 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: #771515;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.wrapper .sidebar .profile img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 5%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+.wrapper .sidebar .profile #student_name{
+    vertical-align: middle;
+    font-size: 15px;
+    color: #dee4ec;
+}
+
+.wrapper .sidebar .profile #student_id{
+    font-size: 14px;
+    color: #dee4ec;
+    vertical-align: text-bottom;
+    margin-top: 1%;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #a1322e;
+    color: rgb(241, 237, 237);
+    position: relative;
+    font-size: 15px;
+    font-family: 'open sans', san sans-serif;
+}
+
+.wrapper .sidebar ul li a .smenu_icon{
+    color: #dee4ec;
+    width: 20px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover{
+    color: rgb(243, 225, 67);
+    background: #a1322e;
+    border-right: 2px solid #771515;
+}
+
+.wrapper .sidebar ul li a:hover .smenu_icon{
+    color: rgb(243, 225, 67);
+}
+
+.wrapper .sidebar .footer{
+    color: #dee4ec;
+    text-align: center;
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 15%
+}
