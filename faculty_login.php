@@ -47,19 +47,25 @@
         }
 
         .button{
-            border-radius: 10px;
+            border: none;
+            border-radius: 50px;
             width: 40%;
+            transition-duration: .35s;
         }
+
+        .button:hover{
+            background-color: rgb(133, 133, 133);
+        }
+
     </style>
 </head>
     <body>
         <div class="input-form">
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Faculty Login</h1>
-        
-        <form action="" method="POST">
-            <input class="username" id="username" type="text" placeholder="username"><br>
-            <input class="password" id="password" type="text" placeholder="password"><br>
+        <form action="faculty_login_inc.php" method="POST">
+            <input class="username" name="username"  type="text" placeholder="Faculty ID" autocomplete="off" required><br>
+            <input class="password" name="password" type="text" placeholder="Password" autocomplete="off" required><br>
             <input class = "button"type="submit" value="Login">
         </form>
         </div>

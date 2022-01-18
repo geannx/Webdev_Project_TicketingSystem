@@ -41,9 +41,17 @@
             align-items: center;
             font-size: 30px;
         }
+
         .button{
-            border-radius: 10px;
+            border: none;
+            border-radius: 50px;
             width: 40%;
+            transition-duration: .35s;
+            
+        }
+
+        .button:hover{
+            background-color: rgb(133, 133, 133);
         }
     </style>
 </head>

@@ -1,5 +1,5 @@
 <?php
-
+// This code is for database connection
 
 $serverName = "localhost";
 $dBUsername = "root";
