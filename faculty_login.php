@@ -58,8 +58,8 @@
         <h1>PUP Ticketing System<br>Faculty Login</h1>
         
         <form action="" method="POST">
-            <input class="username" id="username" type="text" placeholder="username"><br>
-            <input class="password" id="password" type="text" placeholder="password"><br>
+            <input class="username" id="username" type="text" placeholder="Faculty ID" required><br>
+            <input class="password" id="password" type="text" placeholder="Password" required><br>
             <input class = "button"type="submit" value="Login">
         </form>
         </div>
