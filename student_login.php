@@ -51,7 +51,7 @@
         }
 
         .button:hover{
-            background-color: rgb(133, 133, 133);
+            background-color: rgba(238, 238, 238, 0.692);
         }
     </style>
 </head>
