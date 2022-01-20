@@ -59,7 +59,8 @@ body{
     font-family: 'open sans', san sans-serif;
 }
 
-.wrapper .sidebar ul li a .smenu_icon{
+.wrapper .sidebar ul li a .smenu_icon
+.wrapper .smenu_icon ul li a.active .smenu_icon{
     color: #dee4ec;
     width: 20px;
     display: inline-block;
@@ -72,8 +73,14 @@ body{
     border-right: 2px solid #771515;
 }
 
-.wrapper .sidebar ul li a:hover .smenu_icon{
+.wrapper .sidebar ul li a:hover .smenu_icon
+.wrapper .sidebar ul li a.active .smenu_icon{
     color: rgb(243, 225, 67);
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
 }
 
 .wrapper .sidebar .footer{
