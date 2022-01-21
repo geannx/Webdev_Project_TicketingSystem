@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php
-        require 'functions_inc.php';
-    ?>
+
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +67,7 @@
         <form action="faculty_login_inc.php" method="POST">
             <input class="username" name="username"  type="text" placeholder="Faculty ID" autocomplete="off" required><br>
             <input class="password" name="password" type="text" placeholder="Password" autocomplete="off" required><br>
-            <input class = "button"type="submit" value="Login">
+            <input class = "button" type="submit" name="submit" value="Login">
         </form>
         </div>
     </body>
