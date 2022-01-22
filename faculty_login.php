@@ -66,7 +66,7 @@
         <h1>PUP Ticketing System<br>Faculty Login</h1>
         <form action="faculty_login_inc.php" method="POST">
             <input class="username" name="username"  type="text" placeholder="Faculty ID" autocomplete="off" required><br>
-            <input class="password" name="password" type="text" placeholder="Password" autocomplete="off" required><br>
+            <input class="password" name="password" type="password" placeholder="Password" autocomplete="off" required><br>
             <input class = "button" type="submit" name="submit" value="Login">
         </form>
         </div>
