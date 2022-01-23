@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +11,9 @@
 
 <body>
     <div class="wrapper">
-
         <div class="sidebar">
-
                 <!--PUP LOGO-->
             <div class="profile">
-
                 <img src="puplogo.png" alt="">
                     <!--Full Name ng Student-->
                 <h3 id="student_name"><br>Dela Cruz, Juan M.</h3>
@@ -27,7 +23,7 @@
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
-                    <a href="homepage.php" class="active">
+                    <a href="homepage.php">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
                     </a>
@@ -39,23 +35,20 @@
                     </a>
                 </li>
                 <li>
-                    <a href="writeTicket.php">
+                    <a href="writeTicket.php" class="active">
                     <span class="smenu_icon"><i class="far fa-edit"></i></span>
                     <span class="smenu_item">Write New Ticket</span>
                     </a>
                 </li>
             </ul>
-
             <div class="footer">  
                 <div>&copy Polytechnic University of the Philippines College of Computer Information and Sciences 2022
                 </div>
             </div>
         </div>
-
         <div class="section">
             <div class="greetings">
-                <h1 id="homeG">Welcome PUPian!</h1>
-                <p>Kindly choose from the sidebar what service you're looking for.</p>
+                <h1>Hello PUPian!</h1>
             </div>
         </div>
     </div>
