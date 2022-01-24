@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,21 +24,21 @@
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
-                    <a href="homepage.php">
+                    <a href="studentDash.php">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="history.php">
-                    <span class="smenu_icon"><i class="far fa-folder-open"></i></span>
-                    <span class="smenu_item">View History</span>
                     </a>
                 </li>
                 <li>
                     <a href="writeTicket.php" class="active">
                     <span class="smenu_icon"><i class="far fa-edit"></i></span>
                     <span class="smenu_item">Write New Ticket</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="history.php">
+                    <span class="smenu_icon"><i class="far fa-folder-open"></i></span>
+                    <span class="smenu_item">View History</span>
                     </a>
                 </li>
             </ul>
@@ -48,7 +49,7 @@
         </div>
         <div class="section">
             <div class="greetings">
-                <h1>Hello PUPian!</h1>
+                <h1 id="homeG">Write a New Ticket</h1>
             </div>
         </div>
     </div>

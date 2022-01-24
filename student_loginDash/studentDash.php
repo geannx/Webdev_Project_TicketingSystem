@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style_sDash.css">
 </head>
 
+<header id="background">
 <body>
     <div class="wrapper">
 
@@ -27,21 +28,21 @@
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
-                    <a href="homepage.php" class="active">
+                    <a href="studentDash.php" class="active">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="history.php">
-                    <span class="smenu_icon"><i class="far fa-folder-open"></i></span>
-                    <span class="smenu_item">View History</span>
                     </a>
                 </li>
                 <li>
                     <a href="writeTicket.php">
                     <span class="smenu_icon"><i class="far fa-edit"></i></span>
                     <span class="smenu_item">Write New Ticket</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="history.php">
+                    <span class="smenu_icon"><i class="far fa-folder-open"></i></span>
+                    <span class="smenu_item">View History</span>
                     </a>
                 </li>
             </ul>
@@ -60,5 +61,5 @@
         </div>
     </div>
 </body>
-
+</header>
 </html>
