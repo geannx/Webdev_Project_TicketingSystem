@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <meta charset="UTF-8">
@@ -52,6 +53,24 @@
                 <h1 id="homeG">Write a New Ticket</h1>
             </div>
         </div>
+    </div>
+
+    <div class="ticket_form">
+        <form action="" method="POST">
+            <label id="send_to">Send to:</label>
+            <div class="select">
+                <select name="faculty" id="faculty">
+                    <option selected disabled>Recipient Faculty</option>
+                    <option value="Dastas">Faculty Name Dastas</option>
+                    <option value="Nayre">Faculty Name Nayre</option>
+                </select>
+            </div>
+            <div class="text_input">
+                <textarea id="message" name="message"></textarea>
+                <p id="note">Note: After clicking the submit button, you will be given a ticket number that you would need for future references.</p>
+            </div>
+            <button class="button" value="Submit" formaction="#">Submit Ticket</button>
+        </form>
     </div>
 </body>
 

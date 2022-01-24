@@ -111,7 +111,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     color: #a1322e;
-    text-shadow: 1px 2px white;
+    text-shadow: 3px 1px white;
     font-family: 'Yeseva One', cursive;
     text-indent: 15px;
 }
@@ -121,4 +121,62 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
+}
+
+.ticket_form{
+    padding-top: 40px;
+    padding-bottom: 140px;
+    padding-left: 280px;
+    background-color: rgba(248, 249, 252, 0.534) ;
+    text-align: left;
+}
+
+#send_to{
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.ticket_form .select{
+    display: inline-block;
+    padding-left: 5px;
+    size: 20px;
+}
+
+#faculty{
+    width: 300px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.ticket_form .text_input{
+    padding-top: 30px;
+}
+
+#message{
+    resize: none;
+    width: 550px;
+    height: 300px;
+    color: gray;
+    font-family: 'Lato', sans-serif;
+}
+
+#note{
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 450px;
+    font-family: 'Lato', sans-serif;
+}
+
+.ticket_form .button{
+    position: absolute;
+    top: 42%;
+    background-color: #a1322e;
+    border: 3px black;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
+    padding: 10px 10px 10px;
+    margin-left: 610px;
+    font-family: 'Lato', sans-serif;
 }
