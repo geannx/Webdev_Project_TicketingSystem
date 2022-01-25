@@ -60,7 +60,7 @@
     <img src="puplogo.png" alt="pup logo" width="100">
     <h1>PUP Ticketing System<br>Student Login</h1>
     
-    <form action="../student_dashboard/student_login_inc.php" method="POST">
+    <form action="student_login_inc.php" method="POST">
         <input class="username" name="username" id="username" type="text" placeholder="Student ID" required><br>
         <input class="password" name="password" id="password" type="password" placeholder="password"><br>
         <input class = "button" type="submit" name="submit" value="Login">
