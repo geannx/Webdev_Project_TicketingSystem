@@ -64,11 +64,10 @@
         <div class="input-form">
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Faculty Login</h1>
-        
-        <form action="" method="POST">
-            <input class="username" id="username" type="text" placeholder="Faculty ID" required><br>
-            <input class="password" id="password" type="text" placeholder="Password" required><br>
-            <input class = "button"type="submit" value="Login">
+        <form action="faculty_login_inc.php" method="POST">
+            <input class="username" name="username"  type="text" placeholder="Faculty ID" autocomplete="off" required><br>
+            <input class="password" name="password" type="password" placeholder="Password" autocomplete="off" required><br>
+            <input class = "button" type="submit" name="submit" value="Login">
         </form>
         </div>
     </body>
