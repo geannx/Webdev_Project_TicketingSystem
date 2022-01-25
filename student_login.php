@@ -41,9 +41,17 @@
             align-items: center;
             font-size: 30px;
         }
+
         .button{
-            border-radius: 10px;
+            border: none;
+            border-radius: 50px;
             width: 40%;
+            transition-duration: .35s;
+            
+        }
+
+        .button:hover{
+            background-color: rgba(238, 238, 238, 0.692);
         }
     </style>
 </head>
@@ -52,10 +60,17 @@
     <img src="puplogo.png" alt="pup logo" width="100">
     <h1>PUP Ticketing System<br>Student Login</h1>
     
+<<<<<<< HEAD
     <form action="" method="POST">
         <input class="username" id="username" type="text" placeholder="Student ID" required><br>
         <input class="password" id="password" type="text" placeholder="Password" required><br>
         <input class = "button"type="submit" value="Login">
+=======
+    <form action="student_login_inc.php" method="POST">
+        <input class="username" name="username" id="username" type="text" placeholder="Student ID" required><br>
+        <input class="password" name="password" id="password" type="password" placeholder="password"><br>
+        <input class = "button" type="submit" name="submit" value="Login">
+>>>>>>> Steven
     </form>
     </div>
 </body>
