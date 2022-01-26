@@ -47,6 +47,9 @@
             <label for="reply">Reply to:</label> 
             <input type="text" placeholder="Student Name">
             <div>
+                <input type="text" placeholder="Student Number" style="margin-left: 67px">
+            </div>
+            <div>
                 <input type="text" placeholder="Student Faculty" style="margin-left: 67px">
             </div>
             <div>
