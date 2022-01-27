@@ -28,13 +28,13 @@
             header('location: faculty_login.php?error=usernotexists');
             exit();
         }
-        $pwdHashed = $uidExists['usersPwd'];
+        $pwdHashed = $uidExists['FacultyPwd'];
         
         if($pwd === $pwdHashed){
             session_start();
             $_SESSION['username'] = $uidExists['FacultyName'];
             $_SESSION['pwd'] = $uidExists['FacultyPwd'];
-            header('location: faculty_dashboard.php');
+            header('location: fDashboard.php');
             exit();
         }else{
             header('location: faculty_login.php?error=wronglogin');
