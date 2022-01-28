@@ -24,10 +24,10 @@
                 <li><a href="fDashboard.php">
                     <span class="icon"><i class = "fas fa-home"> </i></span>
                     <span class="Item">Home</span></a></li>
-                <li><a href="NewTicket.php">
+                <li><a href="NewTicket.php" class="active">
                     <span class="icon"><i class = "far fa-bell"></i></span>
                     <span class="Item">New Tickets</span></a></li>
-                <li><a href="History.php" class="active">
+                <li><a href="History.php">
                     <span class="icon"><i class = "far fa-folder-open"> </i></span>
                     <span class="Item">View History</span></a></li>
             </ul>
@@ -35,11 +35,32 @@
                 <div>&copy Polytechnic University of the Philippines <br> College of Computer Infomation and Sciences 2022</div>
             </div>
         </div>
-            <div id="hist" class="section">
+            <div class="section">
                 <div class="nav">
-                    <h1>View Ticket History</h1>
+                    <h1>Reply to a Ticket</h1>
                 </div>
             </div>
+    </div>
+
+    <div class="text_form">
+        <form action="" method="POST">
+            <label for="reply">Reply to:</label> 
+            <input type="text" placeholder="Student Name">
+            <div>
+                <input type="text" placeholder="Student Number" style="margin-left: 67px">
+            </div>
+            <div>
+                <input type="text" placeholder="Student Faculty" style="margin-left: 67px">
+            </div>
+            <div>
+                <input type="text" placeholder="Ticket Number" style="margin-left: 67px">
+            </div>
+
+        <div class="text_box">
+            <textarea class="text" placeholder="Your reply here..."></textarea>
+        </div>
+            <button class="button" value="Submit" formaction="#">Reply to Ticket</button>
+        </form>
     </div>
 </body>
 

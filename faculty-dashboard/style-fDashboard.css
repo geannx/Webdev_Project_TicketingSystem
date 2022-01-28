@@ -164,3 +164,21 @@ header{
     margin-left: 610px;
     font-family: 'Lato', sans-serif;
 }
+
+.note{
+    margin-top: 50px;
+    margin-left: 280px;
+}
+
+table, th, td {
+    margin-top: 9px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-left: 270px;
+    border: 1px solid black;
+    
+ }
+
