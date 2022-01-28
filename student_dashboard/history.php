@@ -24,7 +24,7 @@
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
-                    <a href="studentDash.php">
+                    <a href="student_dashboard.php">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
                     </a>
