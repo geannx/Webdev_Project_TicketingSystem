@@ -10,6 +10,7 @@
             exit();
         }
         $sql = "SELECT * FROM student WHERE StudentID = ?";
+        $stmt = mysqli_stmt_init($conn);
         mysqli_stmt_prepare($stmt, $sql);
     ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
