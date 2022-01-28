@@ -1,7 +1,7 @@
 <?php  
 
     function uIDExists($conn, $username){
-        $sql = 'SELECT * FROM student WHERE StudentName = ?;';
+        $sql = 'SELECT * FROM student WHERE StudentID = ?;';
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header('location: student_login.php?error=stmtfailed');
@@ -28,12 +28,12 @@
             header('location: student_login.php?error=usernotexists');
             exit();
         }
-        $pwdHashed = $uidExists['StudentPwd'];
+        $pwdHashed = $uidExists['StudentPassword'];
         
         if($pwd === $pwdHashed){
             session_start();
             $_SESSION['username'] = $uidExists['StudentName'];
-            $_SESSION['pwd'] = $uidExists['StudentPwd'];
+            $_SESSION['pwd'] = $uidExists['StudentPassword'];
             header('location: student_dashboard/student_dashboard.php');
             exit();
         }else{
