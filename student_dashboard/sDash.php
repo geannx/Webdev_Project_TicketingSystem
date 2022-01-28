@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+        require '../dbh_inc.php';
+
+        session_start();
+        if ($_SESSION['StudentID'] === NULL || $_SESSION['StudentPassword'] === NULL){
+            header('location: ../index.html?error=invalidaccess');
+            exit();
+        }
+        $sql = "SELECT * FROM student WHERE StudentID = ?";
+        mysqli_stmt_prepare($stmt, $sql);
+    ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" >
     <meta charset="UTF-8">
@@ -21,14 +32,14 @@
 
                 <img src="puplogo.png" alt="">
                     <!--Full Name ng Student-->
-                <h3 id="student_name"><br>Dela Cruz, Juan M.</h3>
+                <h3 id="student_name"><br><?php echo $_SESSION['StudentName']; ?></h3>
                     <!--Student Number-->
                 <p id="student_id">2019-*****-MN-0</p>
             </div>
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
-                    <a href="studentDash.php" class="active">
+                    <a href="sDash.php" class="active">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
                     </a>

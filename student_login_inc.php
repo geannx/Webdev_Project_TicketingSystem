@@ -34,7 +34,7 @@
             session_start();
             $_SESSION['username'] = $uidExists['StudentName'];
             $_SESSION['pwd'] = $uidExists['StudentPassword'];
-            header('location: student_dashboard/student_dashboard.php');
+            header('location: student_dashboard/sDash.php');
             exit();
         }else{
             header('location: student_login.php?error=wronglogin');
