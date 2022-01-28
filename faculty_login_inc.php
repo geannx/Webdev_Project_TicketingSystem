@@ -34,7 +34,7 @@
             session_start();
             $_SESSION['username'] = $uidExists['FacultyName'];
             $_SESSION['pwd'] = $uidExists['FacultyPwd'];
-            header('location: fDashboard.php');
+            header('location: faculty-dashboard/fDashboard.php');
             exit();
         }else{
             header('location: faculty_login.php?error=wronglogin');
