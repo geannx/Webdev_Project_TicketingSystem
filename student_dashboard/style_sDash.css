@@ -7,11 +7,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    background: #f5f6fa;
-}
-
-.wrapper .sidebar{
+.sidebar{
     background: #771515;
     position: fixed;
     top: 0;
@@ -83,7 +79,7 @@ body{
     display: block;
 }
 
-.wrapper .sidebar .footer{
+.footer{
     color: #dee4ec;
     text-align: center;
     font-size: 10px;
