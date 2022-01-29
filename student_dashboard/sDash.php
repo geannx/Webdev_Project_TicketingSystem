@@ -10,8 +10,12 @@
             exit();
         }
         $sql = "SELECT * FROM student WHERE StudentID = ?";
-        $stmt = mysqli_stmt_init($conn);
+        $stmt = mysqli_stmt_init($conn);    
         mysqli_stmt_prepare($stmt, $sql);
+        mysqli_stmt_bind_param($stmt, "s", $_SESSION['StudentID']);
+        mysqli_stmt_execute($stmt);
+        $Data = mysqli_stmt_get_result($stmt);
+        $Data = mysqli_fetch_assoc($Data);
     ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" >
@@ -33,9 +37,9 @@
 
                 <img src="puplogo.png" alt="">
                     <!--Full Name ng Student-->
-                <h3 id="student_name"><br><?php echo $_SESSION['StudentName']; ?></h3>
+                <h3 id="student_name"><br><?php echo $Data['StudentName']; ?></h3>
                     <!--Student Number-->
-                <p id="student_id">2019-*****-MN-0</p>
+                <p id="student_id"><?php echo $Data['StudentID'];?></p>
             </div>
                 <!--Sidebar Menu Items-->
             <ul>
