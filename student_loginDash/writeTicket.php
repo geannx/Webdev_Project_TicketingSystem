@@ -25,36 +25,41 @@
                 <!--Sidebar Menu Items-->
             <ul>
                 <li>
+                    <!-- Student Dashboard Page -->
                     <a href="studentDash.php">
                     <span class="smenu_icon"><i class="fas fa-home"></i></span>
                     <span class="smenu_item">Home</span>
                     </a>
                 </li>
                 <li>
+                    <!-- Write New Ticket Page -->
                     <a href="writeTicket.php" class="active">
                     <span class="smenu_icon"><i class="far fa-edit"></i></span>
                     <span class="smenu_item">Write New Ticket</span>
                     </a>
                 </li>
                 <li>
+                    <!-- View History Page -->
                     <a href="history.php">
                     <span class="smenu_icon"><i class="far fa-folder-open"></i></span>
                     <span class="smenu_item">View History</span>
                     </a>
                 </li>
             </ul>
+            <!-- Footer that contains PUP -->
             <div class="footer">  
                 <div>&copy Polytechnic University of the Philippines College of Computer Information and Sciences 2022
                 </div>
             </div>
         </div>
+        <!-- Header for Greetings -->
         <div class="section">
             <div class="greetings">
                 <h1 id="homeG">Write a New Ticket</h1>
             </div>
         </div>
     </div>
-
+    <!-- FORM STARTS HERE -->
     <div class="ticket_form">
         <form action="" method="POST">
             <label id="send_to">Send to:</label>
@@ -66,12 +71,15 @@
                 </select>
             </div>
             <div class="text_input">
+                <!-- TEXT AREA -->
                 <textarea id="message" name="message"></textarea>
+                <!-- NOTE AREA -->
                 <p id="note">Note: After clicking the submit button, you will be given a ticket number that you would need for future references.</p>
             </div>
-            <button class="button" value="Submit" formaction="#">Submit Ticket</button>
+            <!-- BUTTON SUBMIT TICKET -->
+            <button class="button" value="Submit" formaction="new_ticket">Submit Ticket</button>
         </form>
-    </div>
+    </div> <!-- FORM ENDS HERE -->
 </body>
 
 </html>
