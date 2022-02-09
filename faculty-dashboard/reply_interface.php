@@ -1,10 +1,6 @@
 
 <!-- connect to database -->
 
-<?php
-    include_once 'dbh.inc.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,21 +50,14 @@
     <div class="text_form">
         <form action="" method="POST">
             <label for="reply">Reply to:</label> 
-            <input type="text" placeholder="Student Name" style="padding: 2px;">
             <div>
-                <input type="text" placeholder="Student Number" style="margin-left: 67px; padding: 2px;">
-            </div>
-            <div>
-                <input type="text" placeholder="Student Faculty" style="margin-left: 67px; padding: 2px;">
-            </div>
-            <div>
-                <input type="text" placeholder="Ticket Number" style="margin-left: 67px; padding: 2px;">
+                <input type="text" placeholder="Message Subject" name="MessageSubject" style="margin-left: 67px; padding: 2px;">
             </div>
 
         <div class="text_box">
             <textarea class="text" placeholder="Your reply here..."></textarea>
         </div>
-            <button class="button" value="Submit" formaction="#">Reply to Ticket</button>
+            <button class="button" value="Submit">Reply to Ticket</button>
         </form>
     </div>
 </body>
