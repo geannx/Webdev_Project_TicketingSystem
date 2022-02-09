@@ -32,7 +32,7 @@
         
         if($pwd === $pwdHashed){
             session_start();
-            $_SESSION['StudentID'] = $uidExists['Student'];
+            $_SESSION['StudentID'] = $uidExists['StudentID'];
             $_SESSION['StudentPassword'] = $uidExists['StudentPassword'];
             header('location: student_dashboard/sDash.php');
             exit();
