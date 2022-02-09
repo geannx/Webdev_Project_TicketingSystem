@@ -1,7 +1,7 @@
 <?php  
 
     function uIDExists($conn, $username){
-        $sql = 'SELECT * FROM faculty WHERE facultyName = ?;';
+        $sql = 'SELECT * FROM faculty WHERE FacultyName = ?;';
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header('location: faculty_login.php?error=stmtfailed');
@@ -32,8 +32,8 @@
         
         if($pwd === $pwdHashed){
             session_start();
-            $_SESSION['username'] = $uidExists['FacultyName'];
-            $_SESSION['pwd'] = $uidExists['FacultyPwd'];
+            $_SESSION['FacultyName'] = $uidExists['FacultyName'];
+            $_SESSION['FacultyPwd'] = $uidExists['FacultyPwd'];
             header('location: faculty-dashboard/fDashboard.php');
             exit();
         }else{
