@@ -12,7 +12,7 @@
             background-image: url('pupbg2.png');
             background-size: 100%;
             color:rgb(46, 46, 46);
-            font-family: monospace, sans-serif;
+            font-family: 'Source Sans Pro', monospace, sans-serif;
             height: 100%;
             overflow: hidden;
         }
