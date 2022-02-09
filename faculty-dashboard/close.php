@@ -60,8 +60,8 @@
                 <th>123, Juan</th>
                 <th>CCIS</th>
                 <th>01/27/2022</th>
-                <th style="font-color: red">   
-                    Close
+                <th style="color: red">   
+                    Closed
                 </th>
             </form>
         </tr>
