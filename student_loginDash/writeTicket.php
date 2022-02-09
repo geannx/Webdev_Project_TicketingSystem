@@ -1,3 +1,7 @@
+<?php
+    include_once 'dbh_ticket.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +81,7 @@
                 <p id="note">Note: After clicking the submit button, you will be given a ticket number that you would need for future references.</p>
             </div>
             <!-- BUTTON SUBMIT TICKET -->
-            <button class="button" value="Submit" formaction="new_ticket">Submit Ticket</button>
+            <button class="button" value="Submit" formaction="#">Submit Ticket</button>
         </form>
     </div> <!-- FORM ENDS HERE -->
 </body>
