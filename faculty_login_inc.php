@@ -1,7 +1,7 @@
 <?php  
 
     function uIDExists($conn, $username){
-        $sql = 'SELECT * FROM faculty WHERE FacultyName = ?;';
+        $sql = 'SELECT * FROM faculty WHERE FacultyID = ?;';
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header('location: faculty_login.php?error=stmtfailed');
