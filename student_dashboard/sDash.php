@@ -5,10 +5,7 @@
         require '../dbh_inc.php';
 
         session_start();
-        if ($_SESSION['StudentID'] === NULL || $_SESSION['StudentPassword'] === NULL){
-            header('location: ../index.html?error=invalidaccess');
-            exit();
-        }
+      
         $sql = "SELECT * FROM student WHERE StudentID = ?";
         $stmt = mysqli_stmt_init($conn);    
         mysqli_stmt_prepare($stmt, $sql);
