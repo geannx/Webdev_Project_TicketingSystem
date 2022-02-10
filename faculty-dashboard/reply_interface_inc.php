@@ -1,5 +1,9 @@
 <?php
-    include '../dbh_inc.php';
+    require '../dbh_inc.php';
 
+    $Subject = $_POST["MessageSubject"];
+    $Body = $_POST["MessageBody"];
+    $sql = "INSERT INTO tickets(MessageBody) VALUES('ADADAS');";
 
-    $sql = 'INSERT INTO tickets (MessageSubject, MessageBody) VALUES(?, ?);';
+    mysqli_execute($conn, $sql);
+    header('location: reply_interface.php?$Subject');

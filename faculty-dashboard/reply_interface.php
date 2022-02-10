@@ -48,16 +48,16 @@
     <!-- Text box -->
 
     <div class="text_form">
-        <form action="" method="POST">
+        <form action="reply_interface_inc.php" method="POST">
             <label for="reply">Reply to:</label> 
             <div>
-                <input type="text" placeholder="Message Subject" name="MessageSubject" style="margin-left: 67px; padding: 2px;">
+                <input type="text" name="MessageSubject" placeholder="Message Subject"  style="margin-left: 67px; padding: 2px;">
             </div>
 
         <div class="text_box">
-            <textarea class="text" placeholder="Your reply here..."></textarea>
+            <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
         </div>
-            <button class="button" value="Submit">Reply to Ticket</button>
+            <button type="submit" class="button" >Reply to a Ticket</button>
         </form>
     </div>
 </body>
