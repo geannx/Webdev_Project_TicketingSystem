@@ -41,34 +41,27 @@
                 </div>
             </div>
     </div>
-    <div>
-        <div class="note">
-            <h5>Note: All tickets received is displayed here, you can reply anytime. You can also close the status of the ticket if it has already reached its final conclusion.</h5>
+
+    <div class="text_form">
+        <form action="" method="POST">
+            <label for="reply">Reply to:</label> 
+            <input type="text" placeholder="Student Name">
+            <div>
+                <input type="text" placeholder="Student Number" style="margin-left: 67px">
+            </div>
+            <div>
+                <input type="text" placeholder="Student Faculty" style="margin-left: 67px">
+            </div>
+            <div>
+                <input type="text" placeholder="Ticket Number" style="margin-left: 67px">
+            </div>
+
+        <div class="text_box">
+            <textarea class="text" placeholder="Your reply here..."></textarea>
         </div>
-
-    <table>
-        <tr>
-            <th>Ticket number</th>
-            <th>Student No. and Name</th>
-            <th>College Department</th>
-            <th>Date</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <form action="" method="post">
-                <th><a  href="reply_interface.php">1234</a></th>
-                <th>123, Juan</th>
-                <th>CCIS</th>
-                <th>01/27/2022</th>
-                <th>   
-                    <!-- <button class="reply" type="submit" value="submit" formaction="reply_interface.php"> Reply</button> -->
-                    <button class="close" type="submit" value="close" formaction="close.php">Close</button>
-                </th>
-            </form>
-        </tr>
-
-
-    </table>
+            <button class="button" value="Submit" formaction="#">Reply to Ticket</button>
+        </form>
+    </div>
 </body>
 
 </html>

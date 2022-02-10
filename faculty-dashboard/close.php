@@ -56,13 +56,12 @@
         </tr>
         <tr>
             <form action="" method="post">
-                <th><a  href="reply_interface.php">1234</a></th>
+                <th>123</th>
                 <th>123, Juan</th>
                 <th>CCIS</th>
                 <th>01/27/2022</th>
-                <th>   
-                    <!-- <button class="reply" type="submit" value="submit" formaction="reply_interface.php"> Reply</button> -->
-                    <button class="close" type="submit" value="close" formaction="close.php">Close</button>
+                <th style="font-color: red">   
+                    Close
                 </th>
             </form>
         </tr>
