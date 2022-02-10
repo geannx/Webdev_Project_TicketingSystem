@@ -1,7 +1,3 @@
-<?php
-    include_once 'dbh_ticket.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,25 +59,29 @@
             </div>
         </div>
     </div>
+
     <!-- FORM STARTS HERE -->
     <div class="ticket_form">
-        <form action="" method="POST">
+        <form action="writeTicket_input.php" method="POST">
             <label id="send_to">Send to:</label>
             <div class="select">
-                <select name="faculty" id="faculty">
+                <select name="faculty_name" id="faculty">
                     <option selected disabled>Recipient Faculty</option>
                     <option value="Dastas">Faculty Name Dastas</option>
                     <option value="Nayre">Faculty Name Nayre</option>
                 </select>
             </div>
             <div class="text_input">
+
                 <!-- TEXT AREA -->
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="ta_message"></textarea>
+
                 <!-- NOTE AREA -->
                 <p id="note">Note: After clicking the submit button, you will be given a ticket number that you would need for future references.</p>
             </div>
+
             <!-- BUTTON SUBMIT TICKET -->
-            <button class="button" value="Submit" formaction="#">Submit Ticket</button>
+            <button type='submit' class="button" value="Submit">Submit Ticket</button>
         </form>
     </div> <!-- FORM ENDS HERE -->
 </body>
