@@ -1,3 +1,5 @@
+/* Homepage Design */
+
 *{
     list-style: none;
     text-decoration: none;
@@ -133,6 +135,8 @@ header{
     opacity: 40%;
 } */
 
+/* reply interface design */
+
 .text_form {
     padding-top: 40px;
     padding-bottom: 140px;
@@ -150,6 +154,7 @@ header{
     height: 300px;
     color: gray;
     font-family: 'Lato', sans-serif;
+    padding: 20px 25px 25px;
 }
 
 .text_form .button{
@@ -179,6 +184,7 @@ table, th, td {
     padding-right: 70px;
     margin-left: 270px;
     border: 1px solid black;
-    
+
  }
 
+ 

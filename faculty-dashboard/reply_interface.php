@@ -1,3 +1,6 @@
+
+<!-- connect to database -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,24 +45,19 @@
             </div>
     </div>
 
+    <!-- Text box -->
+
     <div class="text_form">
-        <form action="" method="POST">
+        <form action="reply_interface_inc.php" method="POST">
             <label for="reply">Reply to:</label> 
-            <input type="text" placeholder="Student Name">
             <div>
-                <input type="text" placeholder="Student Number" style="margin-left: 67px">
-            </div>
-            <div>
-                <input type="text" placeholder="Student Faculty" style="margin-left: 67px">
-            </div>
-            <div>
-                <input type="text" placeholder="Ticket Number" style="margin-left: 67px">
+                <input type="text" name="MessageSubject" placeholder="Message Subject"  style="margin-left: 67px; padding: 2px;">
             </div>
 
         <div class="text_box">
-            <textarea class="text" placeholder="Your reply here..."></textarea>
+            <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
         </div>
-            <button class="button" value="Submit" formaction="#">Reply to Ticket</button>
+            <button type="submit" class="button" >Reply to a Ticket</button>
         </form>
     </div>
 </body>
