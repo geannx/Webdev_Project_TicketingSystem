@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,6 @@
     <link rel="stylesheet" href="style-fDashboard.css">
 </head>
 
-<header>
 <body>
     <div class="wrapper">
         <div class="sidebar">
@@ -22,13 +22,18 @@
             </div>
             <!-- Menu Items -->
             <ul>
-                <li><a href="Homepage.php">
+                <li><a href="fDashboard.php">
                     <span class="icon"><i class = "fas fa-home"> </i></span>
                     <span class="Item">Home</span></a></li>
-                <li><a href="History.php">
-                    <span class="icon"><i class = "far fa-folder-open"> </i></span>
-                    <span class="Item">View History</span></a></li>
                 <li><a href="NewTicket.php">
                     <span class="icon"><i class = "far fa-bell"></i></span>
                     <span class="Item">New Tickets</span></a></li>
+                <li><a href="History.php">
+                    <span class="icon"><i class = "far fa-folder-open"> </i></span>
+                    <span class="Item">View History</span></a></li>
             </ul>
+            <div class="footnote">
+                <div>&copy Polytechnic University of the Philippines <br> College of Computer Infomation and Sciences 2022</div>
+            </div>
+        </div>
+       
