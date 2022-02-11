@@ -2,18 +2,6 @@
 <html lang="en">
 <head>
     <?php
-<<<<<<< HEAD:student_dashboard/sDash.php
-    require '../dbh_inc.php';
-
-    session_start();
-    if ($_SESSION['StudentID'] === NULL || $_SESSION['StudentPassword'] === NULL){
-        header('location: ../index.html?error=invalidaccess');
-        exit();
-    }
-    $sql = "SELECT * FROM student WHERE StudentID = ?";
-    mysqli_stmt_prepare($stmt, $sql);
-    
-=======
         require '../dbh_inc.php';
 
         session_start();
@@ -25,7 +13,6 @@
         mysqli_stmt_execute($stmt);
         $Data = mysqli_stmt_get_result($stmt);
         $Data = mysqli_fetch_assoc($Data);
->>>>>>> main:student_dashboard/student_dashboard.php
     ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" >
@@ -47,11 +34,7 @@
 
                 <img src="puplogo.png" alt="">
                     <!--Full Name ng Student-->
-<<<<<<< HEAD:student_dashboard/sDash.php
-                <h3 id="student_name"><br><?php echo $_SESSION['StudentName']; ?></h3>
-=======
                 <h3 id="student_name"><br><?php echo $Data['StudentName']; ?></h3>
->>>>>>> main:student_dashboard/student_dashboard.php
                     <!--Student Number-->
                 <p id="student_id"><?php echo $Data['StudentID'];?></p>
             </div>

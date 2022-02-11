@@ -48,24 +48,25 @@
 
     <table>
         <tr>
-            <th>Ticket number</th>
-            <th>Student No. and Name</th>
-            <th>College Department</th>
-            <th>Date</th>
+            <th>Ticket Number</th>
+            <th>Student Number</th>
+            <th>Subject</th>
             <th>Status</th>
         </tr>
-        <tr>
-            <form action="" method="post">
-                <th><a  href="reply_interface.php">1234</a></th>
-                <th>123, Juan</th>
-                <th>CCIS</th>
-                <th>01/27/2022</th>
-                <th>   
-                    <!-- <button class="reply" type="submit" value="submit" formaction="reply_interface.php"> Reply</button> -->
-                    <button class="close" type="submit" value="close" formaction="close.php">Close</button>
-                </th>
-            </form>
-        </tr>
+        <?php 
+
+            include '../dbh_inc.php';
+            $sql = "SELECT * FROM ticket_status;";
+            $result = mysqli_query($conn, $sql);
+            $sql2 = "SELECT * FROM ticket_details;";
+            $result2 = mysqli_query($conn, $sql2);
+
+            while($row = mysqli_fetch_assoc($result)){
+                echo "<form action='reply_interface.php' method='POST'> <tr><td><button type='submit'>" . $row["ticket_number"] . "</button></td><td>" . 
+                 $row["StudentID"] . "</td><td>" . $row["Subject"]  . "</td><td>" . $row["status"] . "</td></tr></form>";
+            } 
+        ?>
+   
 
 
     </table>
