@@ -181,3 +181,12 @@ body{
     margin-left: 610px;
     font-family: 'Lato', sans-serif;
 }
+
+.wrapper .container{
+    padding-top: 25px;
+    margin-left: 300px;
+}
+
+.wrapper .container .tb_columns{
+    width: 10%;
+}

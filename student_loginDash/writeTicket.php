@@ -66,9 +66,12 @@
             <label id="send_to">Send to:</label>
             <div class="select">
                 <select name="faculty_name" id="faculty">
-                    <option selected disabled>Recipient Faculty</option>
-                    <option value="Dastas">Faculty Name Dastas</option>
-                    <option value="Nayre">Faculty Name Nayre</option>
+                    <option selected disabled>----------</option>
+                    <option value="Flora De Lisa">Flora De Lisa</option>
+                    <option value="Enteng Kabisote">Enteng Kabisote</option>
+                    <option value="Rowena Cruz">Rowena Cruz</option>
+                    <option value="Gregorio Sarmiento">Gregorio Sarmiento</option>
+                    <option value="David Figaro">David Figaro</option>
                 </select>
             </div>
             <div class="text_input">
