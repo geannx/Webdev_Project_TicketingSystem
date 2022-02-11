@@ -49,10 +49,20 @@
 
     <div class="text_form">
         <form action="reply_interface_inc.php" method="POST">
-            <label for="reply">Reply to:</label> 
-            <div>
-                <input type="text" name="MessageSubject" placeholder="Message Subject"  style="margin-left: 67px; padding: 2px;">
-            </div>
+            <label for="reply">Ticket Details:</label><br>
+            <label>Student ID(Sender): <?php 
+            require_once '../dbh_inc.php';
+             $sql = "SELECT * FROM ticket_status WHERE ticket_number = ?;";
+             $stmt = mysqli_stmt_init($conn);
+             mysqli_stmt_prepare($stmt, $sql);
+             mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
+             mysqli_stmt_execute($stmt);
+             $result = mysqli_stmt_get_result($stmt);
+             $row = mysqli_fetch_assoc($result);
+               echo $row['StudentID'];?></label><br>
+            <label>Subject: <?php
+            echo $row['Subject'];
+            ?></label>
 
         <div class="text_box">
             <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>

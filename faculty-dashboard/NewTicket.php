@@ -62,9 +62,10 @@
             $result2 = mysqli_query($conn, $sql2);
 
             while($row = mysqli_fetch_assoc($result)){
-                echo "<form action='reply_interface.php' method='POST'> <tr><td><button type='submit'>" . $row["ticket_number"] . "</button></td><td>" . 
+                echo "<form action='reply_interface.php' method='POST'> <tr><td><input type='submit' value='"  . $row["ticket_number"] .  "' name = 'ticketnum'></td><td>" . 
                  $row["StudentID"] . "</td><td>" . $row["Subject"]  . "</td><td>" . $row["status"] . "</td></tr></form>";
             } 
+            session_start();
         ?>
    
 
