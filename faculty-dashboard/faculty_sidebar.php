@@ -17,7 +17,17 @@
             <!-- PUP LOGO -->
             <div class="logo">
                 <img src="puplogo.png" alt="">
-                <h3>Dela Cruz, Juan M. </h3>
+                <h3><?php
+                 require_once '../dbh_inc.php';
+                 $sql = "SELECT * FROM faculty WHERE facultyID = ?;";
+                 $stmt = mysqli_stmt_init($conn);
+                 mysqli_stmt_prepare($stmt, $sql);
+                 mysqli_stmt_bind_param($stmt, "s", $_SESSION['facultyID'] );
+                 mysqli_stmt_execute($stmt);
+                 $result = mysqli_stmt_get_result($stmt);
+                 $row = mysqli_fetch_assoc($result);
+                    echo
+                ?></h3>
                 <p>College of Computer and Information Sciences</p>
             </div>
             <!-- Menu Items -->

@@ -23,8 +23,6 @@ include_once 'faculty_sidebar.php';
             include '../dbh_inc.php';
             $sql = "SELECT * FROM ticket_status;";
             $result = mysqli_query($conn, $sql);
-            $sql2 = "SELECT * FROM ticket_details;";
-            $result2 = mysqli_query($conn, $sql2);
 
             while($row = mysqli_fetch_assoc($result)){
                 echo "<form action='reply_interface.php' method='POST'> <tr><td><input type='submit' value='"  . $row["ticket_number"] .  "' name = 'ticketnum'></td><td>" . 

@@ -11,8 +11,8 @@ include_once 'faculty_sidebar.php';
     </div>
     <div class="text_form">
         <form action="reply_interface_inc.php" method="POST">
-            <label for="reply">Ticket Details:</label><br>
-            <label>Student ID(Sender): <?php 
+            <h1>Ticket Details:</h1><br>
+            <label>Ticket Number: <?php 
             require_once '../dbh_inc.php';
              $sql = "SELECT * FROM ticket_status WHERE ticket_number = ?;";
              $stmt = mysqli_stmt_init($conn);
@@ -21,7 +21,10 @@ include_once 'faculty_sidebar.php';
              mysqli_stmt_execute($stmt);
              $result = mysqli_stmt_get_result($stmt);
              $row = mysqli_fetch_assoc($result);
-               echo $row['StudentID'];?></label><br>
+               echo $row['ticket_number'];?></label><br>
+            <label>Student ID: <?php
+            echo $row['StudentID'];
+            ?></label><br>
             <label>Subject: <?php
             echo $row['Subject'];
             ?></label>
