@@ -37,11 +37,15 @@ header{
     text-align: center;
 }
 
-h1 h5{
-    font-size: 10px;
+h2{
+    font-size: 100%;
 }
 
-.wrapper .sidebar .logo img{
+h1{
+    font-family:'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ img{
     float: left;
     width: 50px;
     height: 50px;
@@ -72,18 +76,6 @@ h1 h5{
     font-size: 15px;
 }
 
-.wrapper .sidebar ul li a .icon{
-    color: #dee4ec;
-    width: 20px;
-    display: inline-block;
-}
-
-.wrapper .sidebar ul li a:hover,
-ul li a.active{
-    color: rgb(243, 225, 67);
-    background: #a1322e;
-    border-right: 2px solid #771515;
-}
 
 .wrapper .sidebar ul li a:hover .icon,
 ul li a.active .icon{
@@ -91,12 +83,8 @@ ul li a.active .icon{
 
 }
 
-.wrapper .sidebar ul li a:hover::before,
-.wrapper .sidebar ul li a.active::before{
-    display: block;
-}
 
-.wrapper .sidebar .footnote{
+.footnote{
     color: #dee4ec;
     text-align: left;
     font-size: 9px;
@@ -106,27 +94,26 @@ ul li a.active .icon{
     margin-left: 5px;
 }
 
-.wrapper .section{
+.section{
     width: calc(100% - 225px);
     margin-left: 225px;
     transition:  all 0.5s ease;
 }
 
-.wrapper .section .nav{
+.nav{
     background-color: rgb(238, 199, 69);
     height: 98px;
     display: flex;
     align-items: center;
 }
-
-.wrapper .section .nav{
+.nav{
     color: rgb(119, 36, 36);
     padding-left: 5%;
     text-shadow: 2px 2px #f5f6fa;
     font-family: 'Yeseva One', cursive;
 }
 
-.wrapper .section .nav p{
+.nav p{
     margin-left: 20px;
 }
 
@@ -140,11 +127,11 @@ ul li a.active .icon{
     text-align: left;
 }
 
-.text_form .text_box{
+.text_box{
     padding-top: 30px;
 }
 
-.text_form .text_box .text{
+.text{
     resize: none;
     width: 550px;
     height: 300px;
@@ -153,7 +140,7 @@ ul li a.active .icon{
     padding: 20px 25px 25px;
 }
 
-.text_form .button{
+.button{
     position: absolute;
     top: 35%;
     background-color: #a1322e;
@@ -167,7 +154,7 @@ ul li a.active .icon{
 }
 
 .note{
-    color:yellow
+    color:rgb(136, 43, 43);
     margin-top: 50px;
     margin-left: 280px;
 }
@@ -184,7 +171,10 @@ table, th, td {
 
  }
 
- .ticket-id{
-     
+ .ticket_id{
+    align-items: center;
+    font-size: 20px;
+    padding: 0;
+    background: none;
  }
  

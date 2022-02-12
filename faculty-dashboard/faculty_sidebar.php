@@ -32,7 +32,7 @@
             <!-- PUP LOGO -->
             <div class="logo">
                 <img src="puplogo.png" alt="">
-                <h1><?php echo $Data['FacultyName'];?></h2>
+                <h2><?php echo $Data['FacultyName'];?></h2>
                 <h5><?php echo $Data['FacultyID']; ?></h5>
                 <p><?php echo $Data['FacultyDepartment']; ?></p>
             </div>
@@ -43,10 +43,10 @@
                     <span class="Item">Home</span></a></li>
                 <li><a href="NewTicket.php">
                     <span class="icon"><i class = "far fa-bell"></i></span>
-                    <span class="Item">New Tickets</span></a></li>
-                <li><a href="History.php">
+                    <span class="Item">Create New Ticket</span></a></li>
+                <li><a href="NewTicket.php">
                     <span class="icon"><i class = "far fa-folder-open"> </i></span>
-                    <span class="Item">View History</span></a></li>
+                    <span class="Item">View Tickets</span></a></li>
             </ul>
             <div class="footnote">
                 <div>&copy Polytechnic University of the Philippines <br> College of Computer Infomation and Sciences 2022</div>
