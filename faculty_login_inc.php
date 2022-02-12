@@ -32,7 +32,7 @@
         
         if($pwd === $pwdHashed){
             session_start();
-            $_SESSION['FacultyName'] = $uidExists['FacultyName'];
+            $_SESSION['FacultyID'] = $uidExists['FacultyID'];
             $_SESSION['FacultyPwd'] = $uidExists['FacultyPwd'];
             header('location: faculty-dashboard/fDashboard.php');
             exit();

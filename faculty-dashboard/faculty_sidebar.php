@@ -2,6 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php 
+        require '../dbh_inc.php';
+         session_start();
+         if(!isset($_SESSION['FacultyID'])){
+             header('location: ../faculty_login.php?error=invalidaccess');
+         }
+
+        $sql = "SELECT * FROM faculty WHERE FacultyID = ?";
+        $stmt = mysqli_stmt_init($conn);    
+        mysqli_stmt_prepare($stmt, $sql);
+        mysqli_stmt_bind_param($stmt, "s", $_SESSION['FacultyID']);
+        mysqli_stmt_execute($stmt);
+        $Data = mysqli_stmt_get_result($stmt);
+        $Data = mysqli_fetch_assoc($Data);
+    ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -17,18 +32,9 @@
             <!-- PUP LOGO -->
             <div class="logo">
                 <img src="puplogo.png" alt="">
-                <h3><?php
-                 require_once '../dbh_inc.php';
-                 $sql = "SELECT * FROM faculty WHERE facultyID = ?;";
-                 $stmt = mysqli_stmt_init($conn);
-                 mysqli_stmt_prepare($stmt, $sql);
-                 mysqli_stmt_bind_param($stmt, "s", $_SESSION['facultyID'] );
-                 mysqli_stmt_execute($stmt);
-                 $result = mysqli_stmt_get_result($stmt);
-                 $row = mysqli_fetch_assoc($result);
-                    echo
-                ?></h3>
-                <p>College of Computer and Information Sciences</p>
+                <h1><?php echo $Data['FacultyName'];?></h2>
+                <h5><?php echo $Data['FacultyID']; ?></h5>
+                <p><?php echo $Data['FacultyDepartment']; ?></p>
             </div>
             <!-- Menu Items -->
             <ul>
