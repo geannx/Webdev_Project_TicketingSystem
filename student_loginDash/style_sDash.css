@@ -100,7 +100,7 @@ body{
 .wrapper .section .greetings{
     background-color: rgb(238, 199, 69);
     height: 70px;
-    width: 2400px;
+    width: 100vw;
     padding-left: 5%;
     align-items: center;
     display: table-cell;
@@ -133,14 +133,33 @@ body{
 
 #send_to{
     color: black;
+    display: inline-block;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
 
-.ticket_form .select{
+.select{
     display: inline-block;
     padding-left: 5px;
     size: 20px;
+}
+
+#subj_label{
+    color: black;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+#subject{
+    vertical-align: middle;
+    margin-left: 5px;
+    min-width: 302px;
+    max-height: 22px;
+    resize: none;
+    color: gray;
+    font-family: 'Lato', sans-serif;
 }
 
 #faculty{
@@ -150,7 +169,7 @@ body{
 }
 
 .ticket_form .text_input{
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 #message{
@@ -171,7 +190,7 @@ body{
 
 .ticket_form .button{
     position: absolute;
-    top: 42%;
+    top: 35%;
     background-color: #a1322e;
     border: 3px black;
     color: white;

@@ -63,7 +63,8 @@
     <!-- FORM STARTS HERE -->
     <div class="ticket_form">
         <form action="writeTicket_input.php" method="POST">
-            <label id="send_to">Send to:</label>
+            <pre style="height:10px;"></pre>
+            <label id="send_to">Send to:</label>          
             <div class="select">
                 <select name="faculty_name" id="faculty">
                     <option selected disabled>----------</option>
@@ -73,10 +74,14 @@
                     <option value="Gregorio Sarmiento">Gregorio Sarmiento</option>
                     <option value="David Figaro">David Figaro</option>
                 </select>
-            </div>
-            <div class="text_input">
+            </div><pre style="height:1px;"></pre>
+            <label id="subj_label">Subject:</label>
 
-                <!-- TEXT AREA -->
+                <!-- TEXT AREA FOR SUBJECT -->
+            <textarea id="subject" name="ta_subject"></textarea>
+
+                <!-- TEXT AREA FOR MESSAGE BODY-->
+            <div class="text_input">
                 <textarea id="message" name="ta_message"></textarea>
 
                 <!-- NOTE AREA -->
