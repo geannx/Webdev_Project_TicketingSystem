@@ -78,7 +78,7 @@
             <label id="subj_label">Subject:</label>
 
                 <!-- TEXT AREA FOR SUBJECT -->
-            <textarea id="subject" name="ta_subject"></textarea>
+            <textarea id="subject" placeholder = "Enter faculty name" name="ta_subject"></textarea>
 
                 <!-- TEXT AREA FOR MESSAGE BODY-->
             <div class="text_input">

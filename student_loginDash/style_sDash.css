@@ -158,13 +158,15 @@ body{
     min-width: 302px;
     max-height: 22px;
     resize: none;
-    color: gray;
+    padding: 2px 5px;
+    color: black;
     font-family: 'Lato', sans-serif;
 }
 
 #faculty{
     width: 300px;
     font-size: 15px;
+    padding: 1px 5px;
     font-family: 'Lato', sans-serif;
 }
 

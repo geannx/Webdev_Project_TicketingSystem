@@ -4,6 +4,7 @@
 
         $recipient = $_POST['faculty_name'];
         $message = $_POST['ta_message'];
+        $subject = 
     
         $sql = "INSERT INTO tickets_main VALUES ('1', 'Sunshine', '2019-03460-MN-0', 'CCIS', '$recipient', 'On-going', CURDATE());";
         $sql2 = "INSERT INTO ticket_ref VALUES ('1','$message','1')
