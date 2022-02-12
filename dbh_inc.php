@@ -1,5 +1,5 @@
 <?php
-
+// This code is for database connection
 
 $serverName = "localhost";
 $dBUsername = "root";
@@ -8,6 +8,6 @@ $dBName = "ticketingsystem";
 
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 
-if(!conn){
+if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
 }

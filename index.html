@@ -7,7 +7,7 @@
     <title>PUP Ticketing System Login</title>
     <style>
         body{
-            font-family: "Brooklyn Bold", Arial, "Times New Roman", sans-serif;
+            font-family:  "Times New Roman", sans-serif;
             background-image: url('pupbg3.png');
             background-size: cover;
             overflow:hidden;
@@ -15,17 +15,18 @@
         }
         
         h1{
-            margin-top: 100px;
+            
             text-align: center;
             font-size: 40px;
-            color: rgb(44, 44, 44);
-            text-shadow: 2px 2px rgb(133, 133, 133);
+            color: rgb(126, 14, 14);
+            text-shadow: 2px 2px #ffffff;
         }
 
         h6{
             text-align: center;
             font-size: 13px;
             margin-bottom: 1%;
+            color: rgb(126, 14, 14);
         }
 
         input{
@@ -40,81 +41,70 @@
         }
         
         #student-button{
+            border:none;
             background-color: rgb(0, 0, 255);
             color: white;
-            transition-duration: .5s;
+            transition-duration: .35s;
         }
 
         #student-button:hover{
-            background-color: rgb(0, 0, 109);
+            background-color: rgba(0, 0, 109, 0.685);
             color:white;
         }
         
         #faculty-button{
+            border:none;
             background-color: rgb(255, 78, 78);
             color: white;
-            transition-duration: .5s;
+            transition-duration: .35s;
         }
 
         #faculty-button:hover{
-            background-color: rgb(141, 1, 1);
+            background-color: rgba(141, 1, 1, 0.699);
         }
         
         .form-bg{
-            margin-top: 7%;
-            margin-left: 33%;
-            margin-right: 33%;
-            padding-top: 5px;
+            overflow:auto;
+            margin-top: -35%;
+            margin-left: 35%;
+            margin-right: 35%;
+            padding-top: 50px;
             background-color: rgba(238, 238, 238, 0.692) ;
-            padding-bottom: 130px;
-            border-radius: 5px;
-        }
-
-        .header{
-            background-color: rgba(255, 255, 255, 0.712);
-            margin-top: 0%;
-            padding-top: 100px;
             padding-bottom: 100px;
+            border-radius: 10px;
         }
 
-        /* MENU BAR */
-        ul {
-            font-family: "Times New Roman", sans-serif ;
-            font-size: 18px;
-            color:red;
-            list-style-type: none;
-            margin: 0;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            overflow: hidden;
-            background-color: rgba(253, 255, 246, 0.911);   
+        .disable-select {
+            -webkit-user-select: none;  
+            -moz-user-select: none;    
+            -ms-user-select: none;      
+            user-select: none;
+            user-drag: none;
+        }
+        /* HEADER */
+        .header{
+            width: 100vh;
+            height: 100vh;
+            ondragstart: false;
         }
 
-        li {
-            float: left;
+        .header img{
+            width: 205%;
+            height: 120%;
         }
-        
-        li a {
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+
+
 
     </style>
 </head>
 <body>
-    <ul>
-        <li>&nbsp</li>
-        <li><img src="puplogo.png" width="70"></li><br>
-        <li>&nbsp&nbsp&nbspPOLYTECHNIC UNIVERSITY OF THE PHILIPPINES</li>
-        <br>
-        <li>&nbsp&nbsp&nbspSta. Mesa Manila</li>
-    </ul>
-      
+    <div class="header" >
+        <img class="disable-select" src='header2.png' ondragstart="return false;">
+    </div>
+    
     <div class="form-bg">
-        <h1>Hi, PUPian!</h1>
-        <h6>↓ &nbspPlease click or tap your destination </h6>
+        <h1 class = "disable-select">Hi, PUPian!</h1>
+        <h6 class = "disable-select">↓ &nbspPlease click or tap your destination </h6>
         <div class="form-buttons">
         <form  action="student_login.php">
             <input id="student-button" type="submit" value="Student"/>

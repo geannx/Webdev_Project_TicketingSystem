@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
             background-image: url('pupbg2.png');
             background-size: 100%;
             color:rgb(46, 46, 46);
-            font-family: monospace, sans-serif;
+            font-family: 'Source Sans Pro', monospace, sans-serif;
             height: 100%;
             overflow: hidden;
         }
@@ -47,20 +48,26 @@
         }
 
         .button{
-            border-radius: 10px;
+            border: none;
+            border-radius: 50px;
             width: 40%;
+            transition-duration: .35s;
         }
+
+        .button:hover{
+            background-color: rgba(238, 238, 238, 0.692);
+        }
+
     </style>
 </head>
     <body>
         <div class="input-form">
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Faculty Login</h1>
-        
-        <form action="" method="POST">
-            <input class="username" id="username" type="text" placeholder="username"><br>
-            <input class="password" id="password" type="text" placeholder="password"><br>
-            <input class = "button"type="submit" value="Login">
+        <form action="faculty_login_inc.php" method="POST">
+            <input class="username" name="username"  type="text" placeholder="Faculty ID" required><br>
+            <input class="password" name="password" type="password" placeholder="Password" required><br>
+            <input class = "button" type="submit" name="submit" value="Login">
         </form>
         </div>
     </body>
