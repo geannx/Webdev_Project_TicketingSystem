@@ -41,13 +41,18 @@
                 <li><a href="fDashboard.php">
                     <span class="icon"><i class = "fas fa-home"> </i></span>
                     <span class="Item">Home</span></a></li>
-                <li><a href="NewTicket.php">
+                <li><a href="new_ticket_interface.php">
                     <span class="icon"><i class = "far fa-bell"></i></span>
                     <span class="Item">Create New Ticket</span></a></li>
-                <li><a href="NewTicket.php">
+                <li><a href="view_tickets.php">
                     <span class="icon"><i class = "far fa-folder-open"> </i></span>
                     <span class="Item">View Tickets</span></a></li>
             </ul>
+        <div class="footer-buttons">
+            <ul>
+
+            </ul>
+        </div>
             <div class="footnote">
                 <div>&copy Polytechnic University of the Philippines <br> College of Computer Infomation and Sciences 2022</div>
             </div>
