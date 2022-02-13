@@ -16,7 +16,7 @@ include_once 'faculty_sidebar.php';
         <div class="text_box">
             <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
         </div>
-            <button type="submit" class="button" >Reply to a Ticket</button>
+            <input type="submit" class="button2" value="Create a New Ticket">
         </form>
     </div>
 </body>

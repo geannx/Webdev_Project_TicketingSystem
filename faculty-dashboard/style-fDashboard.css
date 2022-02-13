@@ -20,7 +20,7 @@ header{
     background-position: center;
 }
 
-.wrapper .sidebar{
+.sidebar{
     background: #771515;
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ header{
     transition: all 0.5s ease;
 }
 
-.wrapper .sidebar .logo{
+.sidebar .logo{
     color: white;
     margin-bottom: 30px;
     text-align: center;
@@ -53,21 +53,21 @@ h1{
     margin-top: -3%;
 }
 
-.wrapper .sidebar .logo h3{
+.sidebar .logo h3{
     color:  #dee4ec;
     vertical-align: middle;
     font-size: 10px;
     margin-top: 3%;
 }
 
-.wrapper .sidebar .logo p{
+.sidebar .logo p{
     color: #dee4ec;
     vertical-align: text-bottom;
     font-size: 10px;
     margin-top: 1%;
 }
 
-.wrapper .sidebar ul li a{
+.sidebar ul li a{
     display: block;
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
@@ -105,8 +105,6 @@ ul li a.active .icon{
     height: 98px;
     display: flex;
     align-items: center;
-}
-.nav{
     color: rgb(119, 36, 36);
     padding-left: 5%;
     text-shadow: 2px 2px #f5f6fa;
@@ -121,14 +119,17 @@ ul li a.active .icon{
 /* reply interface design */
 
 .text_form {
-    padding-top: 40px;
-    padding-bottom: 140px;
+    margin-top: 0px;
+    margin-right: 0%;
+    padding-top: 0px;
+    padding-bottom: 1400px;
     padding-left: 280px;
     text-align: left;
 }
 
 .text_box{
-    padding-top: 30px;
+    margin-top: -500px;
+    padding-top: -1000px;
 }
 
 .text{
@@ -141,16 +142,31 @@ ul li a.active .icon{
 }
 
 .button{
+    background: #4859f0;
+    margin-right: 0px;
     position: absolute;
     top: 35%;
-    background-color: #a1322e;
+    background-color: #330d0b;
     border: 3px black;
     color: white;
-    font-weight: 200;
     cursor: pointer;
     padding: 10px 10px 10px;
-    margin-left: 610px;
     font-family: 'Lato', sans-serif;
+}
+
+.button2{
+        margin-right: 0px;
+        position: absolute;
+        top: 35%;
+        background-color: #a1322e;
+        border: 3px black;
+        color: white;
+        font-weight: 200;
+        cursor: pointer;
+        padding: 10px 10px 10px;
+        margin-left: 30000px;
+        font-family: 'Lato', sans-serif;
+    
 }
 
 .note{
@@ -172,9 +188,20 @@ table, th, td {
  }
 
  .ticket_id{
+     
     align-items: center;
     font-size: 20px;
     padding: 0;
     background: none;
  }
  
+ .ticket-history{
+     margin: 10% 65%;
+     padding-right: 0px;
+     padding-left: 300px;
+     background: rgb(153, 110, 255);
+     height: 700px;
+     width: 600px;
+     border-color: #771515;
+     border-style: solid;
+ }
