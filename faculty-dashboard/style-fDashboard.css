@@ -11,6 +11,7 @@
 
 body{
     background: #f5f6fa;
+    overflow-y: hidden;
 }
 
 header{
@@ -53,21 +54,21 @@ h1{
     margin-top: -3%;
 }
 
-.sidebar .logo h3{
+.wrapper .sidebar .logo h3{
     color:  #dee4ec;
     vertical-align: middle;
     font-size: 10px;
     margin-top: 3%;
 }
 
-.sidebar .logo p{
+.wrapper .sidebar .logo p{
     color: #dee4ec;
     vertical-align: text-bottom;
     font-size: 10px;
     margin-top: 1%;
 }
 
-.sidebar ul li a{
+.wrapper .sidebar ul li a{
     display: block;
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
@@ -105,6 +106,8 @@ ul li a.active .icon{
     height: 98px;
     display: flex;
     align-items: center;
+}
+.nav{
     color: rgb(119, 36, 36);
     padding-left: 5%;
     text-shadow: 2px 2px #f5f6fa;
@@ -128,8 +131,7 @@ ul li a.active .icon{
 }
 
 .text_box{
-    margin-top: -500px;
-    padding-top: -1000px;
+    padding-top: 30px;
 }
 
 .text{
@@ -141,33 +143,30 @@ ul li a.active .icon{
     padding: 20px 25px 25px;
 }
 
-.button{
-    background: #4859f0;
-    margin-right: 0px;
-    position: absolute;
+.reply-button-bg{
+    margin-top: 20px;
+    margin-left: 9%;
+    
+}
+
+.reply-button{
     top: 35%;
-    background-color: #330d0b;
-    border: 3px black;
+    background-color: #861713;
+    border: 1px rgb(0, 0, 0);
+    border-style: solid;
     color: white;
+    font-size: 15px;
+    font-weight: 200;
     cursor: pointer;
     padding: 10px 10px 10px;
+    margin-left: 300px;
     font-family: 'Lato', sans-serif;
 }
 
-.button2{
-        margin-right: 0px;
-        position: absolute;
-        top: 35%;
-        background-color: #a1322e;
-        border: 3px black;
-        color: white;
-        font-weight: 200;
-        cursor: pointer;
-        padding: 10px 10px 10px;
-        margin-left: 30000px;
-        font-family: 'Lato', sans-serif;
-    
+.ticket-details{
+    margin-top: 100px;
 }
+
 
 .note{
     color:rgb(136, 43, 43);
@@ -195,13 +194,28 @@ table, th, td {
     background: none;
  }
  
- .ticket-history{
-     margin: 10% 65%;
-     padding-right: 0px;
-     padding-left: 300px;
-     background: rgb(153, 110, 255);
+ .ticket-history-bg{
+     position: absolute;
+     margin: 5% 65% ;
+     padding: 10px;
+     background: rgb(255, 214, 214);
      height: 700px;
      width: 600px;
      border-color: #771515;
      border-style: solid;
+     border-radius: 10px;
+ }
+
+ .ticket-history-inner{
+     border: solid 3px #771515;
+    margin: 5% auto;
+     background: #fffcde;
+     width: 500px;
+     height: 500px;
+     overflow:hidden;
+     overflow-y: scroll;
+ }
+
+ .ticket-history-object{
+     color:rgb(0, 0, 0);
  }
