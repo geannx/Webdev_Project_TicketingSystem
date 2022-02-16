@@ -23,7 +23,7 @@
                 <?php
                     include_once 'dbh_ticket.php';
 
-                    $sqlFetch = mysqli_query($conn, "SELECT * from tickets_main");
+                    $sqlFetch = mysqli_query($conn, "SELECT * from ticket_status");
 
                     // Storing records/rows into array
                     while($row = mysqli_fetch_array($sqlFetch)){
