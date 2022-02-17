@@ -30,7 +30,7 @@
                     echo "Empty Conversation.";
                 }else{
                     while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<br><br>Sender: " . $result2['SenderID'] . '<br><br>' . $result2['MsgBody'];
+                        echo "<br><br>Sender: " . $result2['SenderID'] . '<br>Timestamp: ' . $result2['TimeStamp'] . '<br><br>' . '<br><br>' . $result2['MsgBody'];
                     }
                 }
 
