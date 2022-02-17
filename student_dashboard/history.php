@@ -13,7 +13,7 @@
             <table border = 10>
                 <tr>
                     <th class = "tb_columns">Ticket Number:</th>
-                    <th class = "tb_columns">Recipient:</th>
+                    <th class = "tb_columns">Recipient Faculty:</th>
                     <th class = "tb_columns">Subject:</th>
                     <th class = "tb_columns">Status:</th>
                     <th class = "tb_columns">Date Created:</th>
@@ -23,18 +23,18 @@
                 <?php
                     include_once 'dbh_ticket.php';
 
-                    $sqlFetch = mysqli_query($conn, "SELECT * from ticket_status");
+                    $sqlFetch = mysqli_query($conn, "SELECT * from ticket_details");
 
                     // Storing records/rows into array
                     while($row = mysqli_fetch_array($sqlFetch)){
                     ?>
 
                         <tr>
-                            <th><?php echo $row['ticket_no'];?></th>
-                            <th><?php echo $row['faculty_name'];?></th>
-                            <th><?php echo "&nbsp";?></th>
-                            <th><?php echo $row['status'];?></th>
-                            <th><?php echo $row['date_created'];?></th>
+                            <th><a href="writeTicket.php?ticketnum=<?php echo $row['ticket_number'];?>"><?php echo $row['ticket_number'];?></a></th>
+                            <th><?php echo $row['FacultyID'];?></th>
+                            <th><?php echo $row['Subject'];?></th>
+                            <th><?php echo $row['Status'];?></th>
+                            <th><?php echo $row['DateCreated'];?></th>
                         </tr>
 
                     <?php
