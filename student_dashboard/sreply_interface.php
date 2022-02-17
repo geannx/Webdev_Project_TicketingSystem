@@ -1,16 +1,16 @@
 <?php
-    include_once 'faculty_sidebar.php';
-    require_once '../dbh_inc.php';
-    $sql = "SELECT * FROM ticket_status WHERE ticket_number = ?;";
+    include 'student_sidebar.php';
+    require '../dbh_inc.php';
+    $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?;";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
+    mysqli_stmt_bind_param($stmt, "s", $_GET['ticketnum'] );
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
 ?>
     <div class="section">
-        <div class="nav">
+        <div class="greetings">
             <h1>Reply to a Ticket</h1>
         </div>
     </div>
@@ -47,7 +47,7 @@
             <label>Subject: <?php echo $row['Subject']; ?></label><br>
         </div>
     
-        <form action="reply_interface_inc.php" method="POST">
+        <form action="freply_interface_inc.php" method="POST">
         <div class="text_box">
             <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
         </div>

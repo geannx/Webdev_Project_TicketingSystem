@@ -30,7 +30,7 @@
                     ?>
 
                         <tr>
-                            <th><a href="writeTicket.php?ticketnum=<?php echo $row['ticket_number'];?>"><?php echo $row['ticket_number'];?></a></th>
+                            <th><a href="sreply_interface.php?ticketnum=<?php echo $row['ticket_number'];?>"><?php echo $row['ticket_number'];?></a></th>
                             <th><?php echo $row['FacultyID'];?></th>
                             <th><?php echo $row['Subject'];?></th>
                             <th><?php echo $row['Status'];?></th>
