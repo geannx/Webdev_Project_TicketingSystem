@@ -22,12 +22,12 @@ body{
     transition: all 0.5s ease;
 }
 
-.wrapper .sidebar .profile{
+.profile{
     margin-bottom: 30px;
     text-align: left;
 }
 
-.wrapper .sidebar .profile img{
+.profile img{
     float: left;
     width: 50px;
     height: 50px;
@@ -36,20 +36,20 @@ body{
     margin-top: 3%;
 }
 
-.wrapper .sidebar .profile #student_name{
+ .profile #student_name{
     vertical-align: middle;
     font-size: 15px;
     color: #dee4ec;
 }
 
-.wrapper .sidebar .profile #student_id{
+.profile #student_id{
     font-size: 14px;
     color: #dee4ec;
     vertical-align: text-bottom;
     margin-top: 1%;
 }
 
-.wrapper .sidebar ul li a{
+.sidebar ul li a{
     display: block;
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
@@ -66,24 +66,24 @@ body{
     display: inline-block;
 }
 
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
+ ul li a:hover,
+ ul li a.active{
     color: rgb(243, 225, 67);
     background: #a1322e;
     border-right: 2px solid #771515;
 }
 
-.wrapper .sidebar ul li a:hover .smenu_icon
-.wrapper .sidebar ul li a.active .smenu_icon{
+ ul li a:hover .smenu_icon
+ ul li a.active .smenu_icon{
     color: rgb(243, 225, 67);
 }
 
-.wrapper .sidebar ul li a:hover::before,
-.wrapper .sidebar ul li a.active::before{
+ul li a:hover::before,
+ul li a.active::before{
     display: block;
 }
 
-.wrapper .sidebar .footer{
+.footer{
     color: #dee4ec;
     text-align: center;
     font-size: 10px;
@@ -92,12 +92,12 @@ body{
     width: 11%
 }
 
-.wrapper .section{
+.section{
     width: calc(100%-225px);
     margin-left: 225px;
 }
 
-.wrapper .section .greetings{
+.greetings{
     background-color: rgb(238, 199, 69);
     height: 70px;
     width: 2400px;
@@ -169,7 +169,7 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-.ticket_form .button{
+.button{
     position: absolute;
     top: 42%;
     background-color: #a1322e;
@@ -182,11 +182,11 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-.wrapper .container{
+.container{
     padding-top: 25px;
     margin-left: 300px;
 }
 
-.wrapper .container .tb_columns{
+.tb_columns{
     width: 10%;
 }
