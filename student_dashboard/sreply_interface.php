@@ -20,17 +20,17 @@
         <div class="ticket-history-inner">
             <div class="ticket-history-object">
             <?php
-                $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?";
+                $sql = "SELECT * FROM ticket_messages WHERE ticket_number = ?";
                 $stmt = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt, $sql);
-                mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
+                mysqli_stmt_bind_param($stmt, "s", $_GET['ticketnum'] );
                 mysqli_stmt_execute($stmt);
                 $result1 = mysqli_stmt_get_result($stmt);
                 if(!$result1){
                     echo "Empty Conversation.";
                 }else{
                     while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<br><br>Sender: " . $result2['SenderID'] . "<br>Timestamp: " . $result2['timestamp'] . "<br><br>" . $result2['Body'];
+                        echo "<br><br>Sender: " . $result2['SenderID'] . '<br><br>' . $result2['MsgBody'];
                     }
                 }
 

@@ -190,3 +190,51 @@ ul li a.active::before{
 .tb_columns{
     width: 10%;
 }
+
+/* reply interface */
+.text_form {
+    margin-top: 0px;
+    margin-right: 0%;
+    padding-top: 0px;
+    padding-bottom: 1400px;
+    padding-left: 280px;
+    text-align: left;
+}
+
+.ticket-history-bg{
+    position: absolute;
+    margin: 5% 65% ;
+    padding: 10px;
+    background: rgb(255, 214, 214);
+    height: 700px;
+    width: 600px;
+    border-color: #771515;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.ticket-history-inner{
+    border: solid 3px #771515;
+   margin: 5% ;
+    background: #fffcde;
+    width: 500px;
+    height: 500px;
+    overflow:hidden;
+    overflow-y: scroll;
+}
+
+.ticket-history-object{
+    color:rgb(0, 0, 0);
+}
+.text_box{
+    padding-top: 30px;
+}
+
+.text{
+    resize: none;
+    width: 550px;
+    height: 300px;
+    color: gray;
+    font-family: 'Lato', sans-serif;
+    padding: 20px 25px 25px;
+}
