@@ -43,7 +43,7 @@
         <div class="ticket-details">
             <h1>Ticket Details:</h1><br>
             <label>Ticket Number: <?php echo $row['ticket_number'];?></label><br>
-            <label>Student ID: <?php echo $row['StudentID']; ?></label><br>
+            <label>Faculty ID: <?php echo $row['FacultyID']; ?></label><br>
             <label>Subject: <?php echo $row['Subject']; ?></label><br>
         </div>
     
