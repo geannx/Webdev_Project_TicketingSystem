@@ -54,7 +54,7 @@ h1{
     margin-top: -3%;
 }
 
-.wrapper .sidebar .logo h3{
+ h3{
     color:  #dee4ec;
     vertical-align: middle;
     font-size: 10px;
@@ -73,7 +73,7 @@ h1{
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
     color: rgb(241, 237, 237);
-
+    position: relative;
     font-size: 15px;
 }
 
@@ -125,7 +125,7 @@ ul li a.active .icon{
 select{
     width: 300px;
     display: inline-block;
-    margin: 50px 280px 50px;
+    margin: 50px 0px 40px ;
     padding-left: 5px;
 }
 
@@ -228,4 +228,9 @@ table, th, td {
 
  .ticket-history-object{
      color:rgb(0, 0, 0);
+ }
+
+ .ticket-sent{
+     margin-top: 100px;
+     margin-left: 300px;
  }

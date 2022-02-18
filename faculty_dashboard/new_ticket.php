@@ -9,8 +9,13 @@ include_once 'faculty_sidebar.php';
                 </div>
             </div>
     </div>
-    <div class="select">
-        <select name="faculty_name" id="faculty">
+    
+    <div class="text_form">
+    
+        <form action="new_ticket_inc.php" method="POST">
+            
+        <div class="select">
+        <select name="StudentID" id="faculty">
         <option selected disabled>----------</option>
         <?php
             require '../dbh_inc.php';
@@ -26,12 +31,10 @@ include_once 'faculty_sidebar.php';
             <?php } ?>
         </select>          
     </div>
-    <div class="text_form">
-        <form action="ticket_sent.php" method="POST">
-            
-
         <div class="text_box">
-            <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
+            <label for="Subject">Ticket Subject: </label>
+            <input type="text" name="Subject" placeholder="Subject"><br><br>
+            <textarea class="text" name="MsgBody" placeholder="Your reply here..."></textarea>
         </div>
             <input type="submit" class="button2" value="Create a New Ticket">
         </form>

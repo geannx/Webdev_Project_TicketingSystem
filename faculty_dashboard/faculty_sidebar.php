@@ -41,7 +41,7 @@
                 <li><a href="faculty_dashboard.php">
                     <span class="icon"><i class = "fas fa-home"> </i></span>
                     <span class="Item">Home</span></a></li>
-                <li><a href="new_ticket_interface.php">
+                <li><a href="new_ticket.php">
                     <span class="icon"><i class = "far fa-bell"></i></span>
                     <span class="Item">Create New Ticket</span></a></li>
                 <li><a href="view_tickets.php">
