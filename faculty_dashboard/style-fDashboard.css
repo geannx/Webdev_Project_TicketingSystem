@@ -73,7 +73,7 @@ h1{
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
     color: rgb(241, 237, 237);
-    position: relative;
+
     font-size: 15px;
 }
 
@@ -122,6 +122,12 @@ ul li a.active .icon{
     margin-left: 20px;
 }
 
+select{
+    width: 300px;
+    display: inline-block;
+    margin: 50px 280px 50px;
+    padding-left: 5px;
+}
 
 /* reply interface design */
 
