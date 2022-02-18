@@ -1,7 +1,7 @@
 <?php
-    include_once 'faculty_sidebar.php';
-    require_once '../dbh_inc.php';
-    $sql = "SELECT * FROM ticket_status WHERE ticket_number = ?;";
+    include 'faculty_sidebar.php';
+    require '../dbh_inc.php';
+    $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?;";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
     mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
@@ -20,19 +20,12 @@
         <div class="ticket-history-inner">
             <div class="ticket-history-object">
             <?php
-                $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?";
-                $stmt = mysqli_stmt_init($conn);
-                mysqli_stmt_prepare($stmt, $sql);
-                mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
-                mysqli_stmt_execute($stmt);
-                $result1 = mysqli_stmt_get_result($stmt);
-                if(!$result1){
-                    echo "Empty Conversation.";
-                }else{
-                    while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<br><br>Sender: " . $result2['SenderID'] . "<br>Timestamp: " . $result2['timestamp'] . "<br><br>" . $result2['Body'];
-                    }
+                $sql2 = "SELECT * FROM ticket_details td JOIN ticket_messages tm ON td.ticket_number = tm.ticket_number WHERE td.ticket_number = 1";
+                $stmt2 = mysqli_query($conn, $sql2);
+                while($result2 = mysqli_fetch_assoc($stmt2)){
+                    echo "<br><br>Sender: " . $result2['SenderID'] . "<br>Timestamp: " . $result2['TimeStamp'] . "<br><br>" . $result2['MsgBody'];
                 }
+                
 
             ?>
             

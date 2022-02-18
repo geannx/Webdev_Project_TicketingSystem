@@ -38,7 +38,7 @@
             </div>
             <!-- Menu Items -->
             <ul>
-                <li><a href="fDashboard.php">
+                <li><a href="faculty_dashboard.php">
                     <span class="icon"><i class = "fas fa-home"> </i></span>
                     <span class="Item">Home</span></a></li>
                 <li><a href="new_ticket_interface.php">
@@ -48,13 +48,16 @@
                     <span class="icon"><i class = "far fa-folder-open"> </i></span>
                     <span class="Item">View Tickets</span></a></li>
             </ul>
+            
         <div class="footer-buttons">
             <ul>
-
+                <li><a href="flogout.php">
+                        <span class="icon"><i class = "fas fa-power-off"> </i></span>
+                        <span class="Item">Logout</span></a></li>
             </ul>
         </div>
             <div class="footnote">
+                
                 <div>&copy Polytechnic University of the Philippines <br> College of Computer Infomation and Sciences 2022</div>
             </div>
         </div>
-       
