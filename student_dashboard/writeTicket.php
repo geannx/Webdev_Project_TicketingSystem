@@ -15,13 +15,21 @@
             <label id="send_to">Send to:</label>
             <div class="select">
                 <select name="faculty_name" id="faculty">
-                    <option selected disabled>----------</option>
-                    <option value="Flora De Lisa">Flora De Lisa</option>
-                    <option value="Enteng Kabisote">Enteng Kabisote</option>
-                    <option value="Rowena Cruz">Rowena Cruz</option>
-                    <option value="Gregorio Sarmiento">Gregorio Sarmiento</option>
-                    <option value="David Figaro">David Figaro</option>
+                <option selected disabled>----------</option>
+                <?php
+                    $sql = "SELECT class_head FROM class_list cl JOIN class_details cd ON cl.class_id = cd.class_id WHERE StudentID = ?" ;
+                    $stmt = mysqli_stmt_init($conn);
+                    mysqli_stmt_prepare($stmt, $sql);
+                    mysqli_stmt_bind_param($stmt, "s", $_SESSION['StudentID'] );
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                ?> 
+                    <option value="<?php echo $row['class_head']; ?>"><?php echo $row['class_head']; ?></option>
+                    <?php } ?>
                 </select>
+              
             </div>
             <div class="text_input">
 
