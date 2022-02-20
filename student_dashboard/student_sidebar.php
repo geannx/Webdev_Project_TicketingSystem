@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <ul>
-                <li><a href="flogout.php">
+                <li><a href="slogout.php">
                         <span class="icon"><i class = "fa fa-power-off" aria-hidden="true"> </i></span>
                         <span class="Item">Logout</span></a></li>
                  </ul>
