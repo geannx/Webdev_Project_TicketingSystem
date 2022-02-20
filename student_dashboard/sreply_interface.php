@@ -33,7 +33,6 @@
                         echo "<br><br>Sender: " . $result2['SenderID'] . '<br>Timestamp: ' . $result2['TimeStamp'] . '<br><br>' . '<br><br>' . $result2['MsgBody'];
                     }
                 }
-
             ?>
             
             </div>        
@@ -47,9 +46,9 @@
             <label>Subject: <?php echo $row['Subject']; ?></label><br>
         </div>
     
-        <form action="freply_interface_inc.php" method="POST">
+        <form action="sreply_interface_inc.php" method="POST">
         <div class="text_box">
-            <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
+            <textarea class="text" name="MsgBody" placeholder="Your reply here..."></textarea>
         </div>
         <div class="reply-button-bg">
             <input type="submit" class="reply-button" value="Reply to Ticket">

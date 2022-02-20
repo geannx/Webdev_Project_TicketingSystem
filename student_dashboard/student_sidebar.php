@@ -60,6 +60,11 @@
                     <span class="smenu_item">View History</span>
                     </a>
                 </li>
+                <ul>
+                <li><a href="flogout.php">
+                        <span class="icon"><i class = "fa fa-power-off" aria-hidden="true"> </i></span>
+                        <span class="Item">Logout</span></a></li>
+                 </ul>
 
             </ul>
             <div class="footer">  

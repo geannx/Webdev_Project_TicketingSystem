@@ -8,6 +8,9 @@
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
+
+    session_start();
+    $_SESSION['ticketnum'] = $_POST['ticketnum'];
 ?>
     <div class="section">
         <div class="nav">
@@ -43,7 +46,7 @@
     
         <form action="freply_interface_inc.php" method="POST">
         <div class="text_box">
-            <textarea class="text" name="MessageBody" placeholder="Your reply here..."></textarea>
+            <textarea class="text" name="MsgBody" placeholder="Your reply here..."></textarea>
         </div>
         <div class="reply-button-bg">
             <input type="submit" class="reply-button" value="Reply to Ticket">

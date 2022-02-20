@@ -9,17 +9,16 @@
 
     // Inserting Ticket Values in ticket details table
     $sql = "INSERT INTO ticket_details (ticket_number, StudentID, FacultyID, `Subject`, `Status`, DateCreated) VALUES (?, ?, ?, ?, 'OPEN', curdate());";
-
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
     mysqli_stmt_bind_param($stmt, "isss", $ticketNumber, $_POST['StudentID'], $_SESSION['FacultyID'], $_POST['Subject']);
     mysqli_stmt_execute($stmt);
    
     //Inserting into ticket messages table
-    $sql2 = "INSERT INTO ticket_messages ( ticket_number, TimeStamp, SenderId, MsgBody )VALUES (?, CURRENT_TIMESTAMP, ?, ?);";
+    $sql2 = "INSERT INTO ticket_messages ( ticket_number, `TimeStamp`, SenderID, MsgBody ) VALUES (?, CURRENT_TIMESTAMP, ?, ?);";
     $stmt2 = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt2, $sql2 );
-    mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_POST['FacultyID'], $_POST['MsgBody']);
+    mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_SESSION['FacultyID'], $_POST['MsgBody']);
     mysqli_stmt_execute($stmt2);
     ?>
 
