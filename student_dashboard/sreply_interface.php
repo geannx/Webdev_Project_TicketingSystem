@@ -20,12 +20,14 @@
         <div class="ticket-history-inner">
             <div class="ticket-history-object">
             <?php
+            //query to get all messages belonging to the ticket number
                 $sql = "SELECT * FROM ticket_messages WHERE ticket_number = ?";
                 $stmt = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt, $sql);
                 mysqli_stmt_bind_param($stmt, "s", $_GET['ticketnum'] );
                 mysqli_stmt_execute($stmt);
                 $result1 = mysqli_stmt_get_result($stmt);
+                $_SESSION['ticketnum'] = $_GET['ticketnum'];
                 if(!$result1){
                     echo "Empty Conversation.";
                 }else{
@@ -34,7 +36,6 @@
                     }
                 }
             ?>
-            
             </div>        
         </div>
     </div>

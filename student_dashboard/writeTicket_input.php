@@ -1,5 +1,5 @@
 <?php
-    include_once 'faculty_sidebar.php';
+    include_once 'student_sidebar.php';
     require '../dbh_inc.php';
     // Getting last ticket number in database to create new ticket number
     $sql_getLastTicket = "SELECT ticket_number FROM ticket_details ORDER BY ticket_number DESC;";
@@ -20,4 +20,4 @@
     mysqli_stmt_prepare($stmt2, $sql2 );
     mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_SESSION['FacultyID'], $_POST['MsgBody']);
     mysqli_stmt_execute($stmt2);
-?>
+
