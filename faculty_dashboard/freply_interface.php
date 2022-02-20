@@ -9,7 +9,6 @@
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
 
-    session_start();
     $_SESSION['ticketnum'] = $_POST['ticketnum'];
 ?>
     <div class="section">
