@@ -60,6 +60,7 @@
                     <span class="smenu_item">View History</span>
                     </a>
                 </li>
+
             </ul>
             <div class="footer">  
                 <div>&copy Polytechnic University of the Philippines College of Computer Information and Sciences 2022

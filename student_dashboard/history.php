@@ -22,11 +22,15 @@
                 <!-- Fetching Records from Database -->
                 <?php
                     include_once 'dbh_ticket.php';
-
-                    $sqlFetch = mysqli_query($conn, "SELECT * from ticket_details");
-
+                    //Getting Tickets according to student ID
+                    $sql = "SELECT * from ticket_details WHERE StudentID = ?";
+                    $stmt = mysqli_stmt_init($conn);
+                    mysqli_stmt_prepare($stmt, $sql);
+                    mysqli_stmt_bind_param($stmt, "s", $_SESSION['StudentID']);
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
                     // Storing records/rows into array
-                    while($row = mysqli_fetch_array($sqlFetch)){
+                    while($row = mysqli_fetch_array($result)){
                     ?>
 
                         <tr>

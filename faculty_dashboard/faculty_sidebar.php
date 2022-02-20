@@ -47,12 +47,18 @@
                 <li><a href="view_tickets.php">
                     <span class="icon"><i class = "far fa-folder-open"> </i></span>
                     <span class="Item">View Tickets</span></a></li>
+                <li>
+                    <a href="view_classes.php">
+                    <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <span class="item">View Classes</span>
+                    </a>
+                </li>
             </ul>
             
         <div class="footer-buttons">
             <ul>
                 <li><a href="flogout.php">
-                        <span class="icon"><i class = "fas fa-power-off"> </i></span>
+                        <span class="icon"><i class = "fa fa-power-off" aria-hidden="true"> </i></span>
                         <span class="Item">Logout</span></a></li>
             </ul>
         </div>

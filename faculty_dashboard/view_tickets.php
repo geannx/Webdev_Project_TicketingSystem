@@ -23,8 +23,13 @@ include_once 'faculty_sidebar.php';
 
             include '../dbh_inc.php';
             // statement to select all query
-            $sql = "SELECT * FROM ticket_details;";
-            $result = mysqli_query($conn, $sql);
+            $sql = "SELECT * FROM ticket_details WHERE FacultyID = ?;";
+            $stmt = mysqli_stmt_init($conn);
+            mysqli_stmt_prepare($stmt, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $_SESSION['FacultyID']);
+            mysqli_stmt_execute($stmt);
+            
+            $result = mysqli_stmt_get_result($stmt);
 
             // loop to show all tickets
             while($row = mysqli_fetch_assoc($result)){
