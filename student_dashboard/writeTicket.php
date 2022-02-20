@@ -30,8 +30,9 @@
                     <?php } ?>
                 </select>
             </div><br><br>
-            <label for="Subject">Subject: </label>
-            <input type="text" name ="Subject" placeholder="Subject"> 
+
+            <label id = "Lsubject">Subject: </label>
+            <input type="text" id="t_subject" name ="Subject" placeholder="Subject"> 
             <div class="text_input">
 
                 <!-- TEXT AREA -->
