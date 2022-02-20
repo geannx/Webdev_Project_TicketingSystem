@@ -208,6 +208,39 @@ body{
     margin-left: 300px;
 }
 
-.wrapper .container .tb_columns{
-    width: 10%;
+.stix_container{
+    margin-left: 250px;
 }
+
+.tb_columns{
+    width: 10%;
+    font-family: 'Lato', sans-serif;
+}
+
+.tb_rows{
+    width: 10%;
+    font-family: 'Lato', sans-serif;
+}
+
+#tix_box{
+    margin-top: 50px;
+}
+
+.tix_columns{
+    font-family: 'Lato', sans-serif;
+}
+
+#tnum, #tsent{
+    width: 150px;
+}
+
+#tsubj{
+    width: 320px;
+}
+
+#tmess{
+    width: 500px;
+}
+
+
+

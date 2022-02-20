@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <meta charset="UTF-8">
@@ -60,7 +61,7 @@
 
         <!-- Ticket History Container Box -->
         <div class="container">
-            <table border = 10>
+            <table border = 10px name = ttable>
                 <tr>
                     <th class = "tb_columns">Ticket Number:</th>
                     <th class = "tb_columns">Recipient:</th>
@@ -73,21 +74,23 @@
                 <?php
                     include_once 'dbh_ticket.php';
 
-                    $sqlFetch = mysqli_query($conn, "SELECT * from tickets_main");
+                    $sql_tm = mysqli_query($conn, "SELECT * from tickets_main");
+                    $sql_tf = mysqli_query($conn, "SELECT * from ticket_ref");
 
                     // Storing records/rows into array
-                    while($row = mysqli_fetch_array($sqlFetch)){
+                    while($row_tm = mysqli_fetch_array($sql_tm)){
+                        while($row_tf = mysqli_fetch_array($sql_tf)){
                     ?>
 
                         <tr>
-                            <th><?php echo $row['ticket_no'];?></th>
-                            <th><?php echo $row['faculty_name'];?></th>
-                            <th><?php echo "&nbsp";?></th>
-                            <th><?php echo $row['status'];?></th>
-                            <th><?php echo $row['date_created'];?></th>
+                            <th class = "tb_rows"><a style= "color: #0645AD" href= "show_tix.php"><?php echo $row_tm['ticket_no'];?></a></th>
+                            <th class = "tb_rows"><?php echo $row_tm['faculty_name'];?></th>
+                            <th class = "tb_rows"><?php echo $row_tf['subject'];?></th>
+                            <th class = "tb_rows"><?php echo $row_tm['status'];?></th>
+                            <th class = "tb_rows"><?php echo date("m/d/Y", strtotime($row_tm["date_created"]));?></th>
                         </tr>
-
                     <?php
+                        }
                     }
                 ?>
             </table>

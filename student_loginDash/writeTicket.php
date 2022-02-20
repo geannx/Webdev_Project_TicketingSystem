@@ -67,7 +67,7 @@
             <label id="send_to">Send to:</label>          
             <div class="select">
                 <select name="faculty_name" id="faculty">
-                    <option selected disabled>----------</option>
+                    <option selected disabled>-</option>
                     <option value="Flora De Lisa">Flora De Lisa</option>
                     <option value="Enteng Kabisote">Enteng Kabisote</option>
                     <option value="Rowena Cruz">Rowena Cruz</option>
@@ -78,7 +78,7 @@
             <label id="subj_label">Subject:</label>
 
                 <!-- TEXT AREA FOR SUBJECT -->
-            <textarea id="subject" placeholder = "Enter faculty name" name="ta_subject"></textarea>
+            <textarea id="subject" placeholder = "Write subject of your message." name="ta_subject"></textarea>
 
                 <!-- TEXT AREA FOR MESSAGE BODY-->
             <div class="text_input">
