@@ -184,14 +184,15 @@ select{
     margin-left: 280px;
 }
 
-table, th, td {
-    margin-top: 9px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 15px;
-    padding-left: 70px;
-    padding-right: 70px;
-    margin-left: 270px;
+ th, td {
+     text-align: center;
+    margin-top: 2px;
+    padding-top: -20px;
+    padding-bottom: 2px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
     border: 1px solid black;
 
  }
@@ -234,3 +235,19 @@ table, th, td {
      margin-top: 100px;
      margin-left: 300px;
  }
+
+ .view-tickets{
+    /* background-color: #ffecec; */
+     width: 1300px;
+     height: 100px;
+     overflow-y: hidden;
+ }
+
+ .view-tickets2{
+    margin-top: 50px;
+    margin-left: 300px;
+   background-color: #f8f8f8;
+    width: 1500px;
+    height: 600px;
+    overflow-y: scroll;
+}

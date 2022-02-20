@@ -20,15 +20,16 @@
         <div class="ticket-history-inner">
             <div class="ticket-history-object">
             <?php
-                $sql2 = "SELECT * FROM ticket_details td JOIN ticket_messages tm ON td.ticket_number = tm.ticket_number WHERE td.ticket_number = 1";
-                $stmt2 = mysqli_query($conn, $sql2);
-                while($result2 = mysqli_fetch_assoc($stmt2)){
-                    echo "<br><br>Sender: " . $result2['SenderID'] . "<br>Timestamp: " . $result2['TimeStamp'] . "<br><br>" . $result2['MsgBody'];
+                $sql2 = "SELECT * FROM ticket_details td JOIN ticket_messages tm ON td.ticket_number = tm.ticket_number WHERE td.ticket_number = ?";
+                $stmt2 = mysqli_stmt_init($conn);
+                mysqli_stmt_prepare($stmt2, $sql2 );
+                mysqli_stmt_bind_param($stmt2, "s", $_POST['ticketnum']);
+                mysqli_stmt_execute($stmt2);
+                $result2 = mysqli_stmt_get_result($stmt2);
+                while($row2 = mysqli_fetch_assoc($result2)){
+                    echo "<br><br>Sender: " . $row2['SenderID'] . "<br>Timestamp: " . $row2['TimeStamp'] . "<br><br>" . $row2['MsgBody'];
                 }
-                
-
             ?>
-            
             </div>        
         </div>
     </div>
