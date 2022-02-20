@@ -19,7 +19,7 @@
     $sql2 = "INSERT INTO ticket_messages ( ticket_number, TimeStamp, SenderId, MsgBody )VALUES (?, CURRENT_TIMESTAMP, ?, ?);";
     $stmt2 = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt2, $sql2 );
-    mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_POST['StudentID'], $_POST['MsgBody']);
+    mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_POST['FacultyID'], $_POST['MsgBody']);
     mysqli_stmt_execute($stmt2);
     ?>
 
