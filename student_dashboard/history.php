@@ -10,7 +10,7 @@
 
         <!-- Ticket History Container Box -->
         <div class="container">
-            <table border = 10>
+            <table class ="table-history" border = 2>
                 <tr>
                     <th class = "tb_columns">Ticket Number:</th>
                     <th class = "tb_columns">Recipient Faculty:</th>

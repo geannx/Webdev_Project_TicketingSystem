@@ -186,10 +186,15 @@ ul li a.active::before{
 .container{
     padding-top: 25px;
     margin-left: 300px;
+    margin-right: 500px;
+}
+
+.table-history{
+    width: 1000px;
 }
 
 .tb_columns{
-    width: 10%;
+    
 }
 
 /* reply interface */
