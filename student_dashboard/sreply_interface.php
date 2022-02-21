@@ -9,9 +9,10 @@
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
 ?>
+    <link rel="stylesheet" href="style_sDash.css">
     <div class="section">
         <div class="greetings">
-            <h1>Reply to a Ticket</h1>
+            <h1 id = "homeG">Reply to a Ticket</h1>
         </div>
     </div>
     </div>

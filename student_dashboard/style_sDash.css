@@ -37,7 +37,7 @@ body{
     margin-top: 3%;
 }
 
- .profile #student_name{
+.profile #student_name{
     vertical-align: middle;
     font-size: 15px;
     color: #dee4ec;
@@ -180,13 +180,6 @@ ul li a.active::before{
     color: gray;
     font-family: 'Lato', sans-serif;
     padding: 20px 25px 25px;
-}
-
-#note{
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 450px;
-    font-family: 'Lato', sans-serif;
 }
 
 .button{

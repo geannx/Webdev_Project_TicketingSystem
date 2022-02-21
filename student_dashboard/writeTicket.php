@@ -18,7 +18,8 @@
                 <option selected disabled>----------</option>
                 <?php
                 //Loop to display all faculty head student is enrolled in
-                    $sql = "SELECT FacultyName FROM faculty WHERE FacultyID IN (SELECT class_head FROM class_list cl JOIN class_details cd ON cl.class_id = cd.class_id WHERE StudentID = ?);" ;
+                    $sql = "SELECT FacultyName, class_head FROM faculty f JOIN class_list cl ON f.FacultyID = cl.class_head WHERE FacultyID IN 
+                            (SELECT class_head FROM class_list cl JOIN class_details cd ON cl.class_id = cd.class_id WHERE StudentID = ?);" ;
                     $stmt = mysqli_stmt_init($conn);
                     mysqli_stmt_prepare($stmt, $sql);
                     mysqli_stmt_bind_param($stmt, "s", $_SESSION['StudentID'] );
@@ -26,7 +27,7 @@
                     $result = mysqli_stmt_get_result($stmt);
                     while($row = mysqli_fetch_assoc($result)){
                 ?> 
-                    <option value="<?php echo $row['FacultyName']; ?>"><?php echo $row['FacultyName']; ?></option>
+                    <option value="<?php echo $row['class_head']; ?>"><?php echo $row['FacultyName']; ?></option>
                     <?php } ?>
                 </select>
             </div><br><br>
@@ -39,7 +40,11 @@
                 <textarea id="message" name="MsgBody"></textarea>
 
                 <!-- NOTE AREA -->
-                <p id="note">Note: After clicking the submit button, you will be given a ticket number that you would need for future references.</p>
+                <p style =    "padding-top: 10px;
+                                padding-left: 25px;
+                                width: 520px;
+                                font-family: 'Lato', sans-serif;"
+                >Note: After clicking the submit button, please refer to "View History" for the ticket number that you would need for future references.</p>
             </div>
 
             <!-- BUTTON SUBMIT TICKET -->
