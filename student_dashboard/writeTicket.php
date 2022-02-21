@@ -18,7 +18,7 @@
                 <option selected disabled>----------</option>
                 <?php
                 //Loop to display all faculty head student is enrolled in
-                    $sql = "SELECT class_head FROM class_list cl JOIN class_details cd ON cl.class_id = cd.class_id WHERE StudentID = ?" ;
+                    $sql = "SELECT FacultyName FROM faculty WHERE FacultyID IN (SELECT class_head FROM class_list cl JOIN class_details cd ON cl.class_id = cd.class_id WHERE StudentID = ?);" ;
                     $stmt = mysqli_stmt_init($conn);
                     mysqli_stmt_prepare($stmt, $sql);
                     mysqli_stmt_bind_param($stmt, "s", $_SESSION['StudentID'] );
@@ -26,13 +26,13 @@
                     $result = mysqli_stmt_get_result($stmt);
                     while($row = mysqli_fetch_assoc($result)){
                 ?> 
-                    <option value="<?php echo $row['class_head']; ?>"><?php echo $row['class_head']; ?></option>
+                    <option value="<?php echo $row['FacultyName']; ?>"><?php echo $row['FacultyName']; ?></option>
                     <?php } ?>
                 </select>
             </div><br><br>
 
             <label id = "Lsubject">Subject: </label>
-            <input type="text" id="t_subject" name ="Subject" placeholder="Subject"> 
+            <input type="text" id="t_subject" name ="Subject" placeholder="Enter subject"> 
             <div class="text_input">
 
                 <!-- TEXT AREA -->

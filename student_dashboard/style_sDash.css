@@ -140,8 +140,21 @@ ul li a.active::before{
 
 #Lsubject{
     color: black;
+    display: inline-block;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    padding-top: 15px;
+}
+
+#t_subject{
+    vertical-align: middle;
+    margin-left: 5px;
+    min-width: 302px;
+    max-height: 22px;
+    resize: none;
+    padding: 2px 5px;
+    color: black;
+    font-family: 'Lato', sans-serif;
 }
 
 .ticket_form .select{

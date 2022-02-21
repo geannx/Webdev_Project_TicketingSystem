@@ -38,7 +38,7 @@
                             <th><?php echo $row['FacultyID'];?></th>
                             <th><?php echo $row['Subject'];?></th>
                             <th><?php echo $row['Status'];?></th>
-                            <th><?php echo $row['DateCreated'];?></th>
+                            <th><?php echo date("m/d/Y", strtotime($row["DateCreated"]));?></th>
                         </tr>
 
                     <?php
