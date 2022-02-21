@@ -13,12 +13,14 @@ include_once 'faculty_sidebar.php';
 
     <div class="view-tickets2">
     <table class="view-tickets">
+        <!-- Display ticket data -->
         <tr>
             <th>Ticket Number</th>
             <th>Student Number</th>
             <th>Subject</th>
             <th>Status</th>
         </tr>
+        <form action='freply_interface.php' method='POST'> 
         <?php 
 
             include '../dbh_inc.php';
@@ -30,13 +32,19 @@ include_once 'faculty_sidebar.php';
             mysqli_stmt_execute($stmt);
             
             $result = mysqli_stmt_get_result($stmt);
-
+            
             // loop to show all tickets
-            while($row = mysqli_fetch_assoc($result)){
-                echo "<form action='freply_interface.php' method='POST'> <tr><td><input class='ticket_id' type='submit' value='"  . $row["ticket_number"] .  "' name = 'ticketnum'></td><td>" . 
-                 $row["StudentID"] . "</td><td>" . $row["Subject"]  . "</td><td>" . $row["Status"] . "</td></tr></form>";
-            } 
-        ?>
+            while($row = mysqli_fetch_assoc($result)){ ?>
+                
+             
+                <tr>
+                <td><input class='ticket_id' type='submit' value='  <?php echo $row["ticket_number"]; ?>' name = 'ticketnum'></td>
+                <td>  <?php  echo $row["StudentID"]; ?> </td>
+                <td> <?php echo $row["Subject"]; ?>  </td>
+                <td>  <?php  echo $row["Status"]; ?> </td></tr>
+           
+          <?php  }  ?>
+          </form>
     </table>
         </div>
     </div>
