@@ -199,7 +199,6 @@ select{
  }
 
  .ticket_id{
-     
     align-items: center;
     font-size: 20px;
     padding: 0;
@@ -251,4 +250,12 @@ select{
     width: 1500px;
     height: 600px;
     overflow-y: scroll;
+}
+
+#Status{
+    width: 100px;
+}
+
+.ticket-rows{
+    height: 30px;
 }
