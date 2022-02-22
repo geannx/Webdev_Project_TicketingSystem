@@ -90,7 +90,7 @@ ul li a.active::before{
     font-size: 10px;
     position: fixed;
     bottom: 0;
-    width: 11%
+    width: 11%;
 }
 
 .section{
@@ -101,7 +101,7 @@ ul li a.active::before{
 .greetings{
     background-color: rgb(238, 199, 69);
     height: 70px;
-    width: 2400px;
+    width: 100vw;
     padding-left: 5%;
     align-items: center;
     display: table-cell;
@@ -115,6 +115,13 @@ ul li a.active::before{
     text-shadow: 3px 1px white;
     font-family: 'Yeseva One', cursive;
     text-indent: 15px;
+}
+
+#note{
+    padding-top: 10px;
+    padding-left: 25px;
+    width: 520px;
+    font-family: 'Lato', sans-serif;
 }
 
 #background{
@@ -205,50 +212,98 @@ ul li a.active::before{
     width: 1000px;
 }
 
-/* reply interface */
-.text_form {
-    margin-top: 100px;
-    margin-left: 50%;
-    padding-top: 0px;
-    padding-bottom: 1400px;
-    padding-left: 280px;
-    text-align: left;
+/* sreply_interface.php */
+#ticket_rh{
+    color: #771515;
+    margin: 40px 35px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    text-shadow: 1px 1px white;
 }
 
 .ticket-history-bg{
     position: absolute;
-    margin: 5% 20% ;
+    margin: 20px 250px;
     padding: 10px;
     background: rgb(255, 214, 214);
     height: 700px;
     width: 600px;
-    border-color: #771515;
-    border-style: solid;
+    border: solid #771515;
     border-radius: 10px;
 }
 
 .ticket-history-inner{
     border: solid 3px #771515;
-   margin: 5% ;
+    margin: 30px 30px 30px;
     background: #fffcde;
-    width: 500px;
+    width: 513px;
     height: 500px;
-    overflow:hidden;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
 .ticket-history-object{
     color:rgb(0, 0, 0);
-}
-.text_box{
-    padding-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.text{
+.ticket_reply_container{
+    position: absolute;
+    top: 230px;
+    left: 900px;
+    background: #fffcde;
+    height: 400px;
+    width: 700px;
+    border: solid rgb(238, 199, 69);
+    border-radius: 10px;
+}
+
+.text_form {
+    margin: 20px 30px;
+    text-align: left;
+}
+
+#td_lb{
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+}
+
+.ticket_details{
+    margin-left: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+.text_box{
+    position: relative;
+    padding-top: 5px;
+}
+
+.tb_text{
     resize: none;
-    width: 550px;
-    height: 300px;
+    margin-left: 2px;
+    border: 2px solid rgb(238, 199, 69);
+    border-radius: 10px;
+    width: 637px;
+    height: 245px;
     color: gray;
     font-family: 'Lato', sans-serif;
-    padding: 20px 25px 25px;
+    padding: 20px 20px 20px;
+    outline: none;
+}
+
+.reply_button{
+    position: absolute;
+    top: 410px;
+    left: 0%;
+    background-color: #a1322e;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
+    padding: 10px 10px 10px;
+    font-family: 'Lato', sans-serif;
 }

@@ -1,13 +1,19 @@
 <?php 
     include 'student_sidebar.php';
 ?>
-        <!-- Header for Greetings -->
-        <div class="section">
-            <div class="greetings">
-                <h1 id="homeG">Write a New Ticket</h1>
-            </div>
-        </div>
+
+<body>
+<!-- Include Style Sheet -->
+<style>
+        <?php include "style_sDash.css";?>
+</style>
+
+<!-- Header for Greetings -->
+<div class="section">
+    <div class="greetings">
+        <h1 id="homeG">Write a New Ticket</h1>
     </div>
+</div>
 
     <!-- FORM STARTS HERE -->
     <div class="ticket_form">
@@ -40,11 +46,7 @@
                 <textarea id="message" name="MsgBody"></textarea>
 
                 <!-- NOTE AREA -->
-                <p style =    "padding-top: 10px;
-                                padding-left: 25px;
-                                width: 520px;
-                                font-family: 'Lato', sans-serif;"
-                >Note: After clicking the submit button, please refer to "View History" for the ticket number that you would need for future references.</p>
+                <p id="note" >Note: After clicking the submit button, please refer to "View History" for the ticket number that you would need for future references.</p>
             </div>
 
             <!-- BUTTON SUBMIT TICKET -->
