@@ -44,13 +44,25 @@
                     echo "Empty Conversation.";
                 }else{
                     while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<br><br>Sender: " . $result2['SenderID'] . '<br>Date: ' . date("F d, Y", strtotime($result2['TimeStamp'])) . '<br><br>' . '<br>' . $result2['MsgBody'];
+                        echo "<br>Sender: " . $result2['SenderID'] . '<br>Date:' . date("F d, Y", strtotime($result2['TimeStamp'])) . '<br>Time:' . date("H:i", strtotime($result2['TimeStamp'])) . '<br>' . '<br>' . $result2['MsgBody'] .'<br><br>';
                     }
                 }
             ?>
             </div>        
         </div>
     </div>
+
+    <!-- To get the faculty name addresed in the ticket -->
+    <?php
+        if(strtolower($row['Status']) == 'open'){
+        $db_FacultyID = $row['FacultyID'];
+        $fname_sql = "SELECT FacultyName from faculty WHERE FacultyID = '$db_FacultyID';";
+        $fname_result = mysqli_query($conn,$fname_sql);
+        
+        while($fname_row = mysqli_fetch_assoc($fname_result)){
+            $fname_php = $fname_row['FacultyName'];
+        }
+    ?>
         
     <!-- Write Reply Section -->
     <div class = "ticket_reply_container">
@@ -58,7 +70,7 @@
             <div>
                 <h2 id="td_lb">Ticket Details:</h2><br>
                 <label class="ticket_details">Ticket Number: <?php echo $row['ticket_number'];?></label><br>
-                <label class="ticket_details">Faculty Name: <?php echo $row['FacultyID'] ?></label><br>
+                <label class="ticket_details">Faculty Name: <?php echo $fname_php ?></label><br>
                 <label class="ticket_details">Subject: <?php echo $row['Subject']; ?></label><br>
             </div>
                 
@@ -75,6 +87,7 @@
             </form>
         </div>
     </div>
+    <?php } ?>
 </body>
 
 </html>
