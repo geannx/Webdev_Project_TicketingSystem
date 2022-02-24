@@ -43,11 +43,14 @@
                 if(!$result1){
                     echo "Empty Conversation.";
                 }else{
-                    while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<br>Sender: " . $result2['SenderID'] . '<br>Date:' . date("F d, Y", strtotime($result2['TimeStamp'])) . '<br>Time:' . date("H:i", strtotime($result2['TimeStamp'])) . '<br>' . '<br>' . $result2['MsgBody'] .'<br><br>';
-                    }
-                }
-            ?>
+                    while($result2 = mysqli_fetch_assoc($result1)){ ?>
+                    <p id = "ticket_sdt"> <br>Sender: 
+                    <?php echo $result2['SenderID'] ?>
+                    <br>Date: <?php echo date("F d, Y", strtotime($result2['TimeStamp'])) ?>   
+                    <br>Time: <?php echo date("H:i", strtotime($result2['TimeStamp'])) ?> </p>
+                    <p id = "ticket_body"></br></br>&emsp;<?php echo $result2['MsgBody'] .'<br><br>'; ?></p>     
+                    <?php }
+                } ?>
             </div>        
         </div>
     </div>

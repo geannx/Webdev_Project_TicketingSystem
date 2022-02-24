@@ -213,6 +213,7 @@ ul li a.active::before{
 }
 
 /* sreply_interface.php */
+
 #ticket_rh{
     color: #771515;
     margin: 40px 35px;
@@ -247,6 +248,17 @@ ul li a.active::before{
     color:rgb(0, 0, 0);
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#ticket_sdt{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#ticket_body{
+    color: #383a3d;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .ticket_reply_container{
@@ -305,5 +317,37 @@ ul li a.active::before{
     font-weight: 200;
     cursor: pointer;
     padding: 10px 10px 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* history.php */
+
+.table-history{
+    border-collapse: collapse;
+    width: 81vw;
+    background-color: #dee4ec;
+}
+
+.tablehistory, tr:nth-child(even){
+    background-color: #d4dde9;
+}
+
+.table-history tr:hover{
+    background-color: #bcbfc4;
+}
+
+.tb_columns{
+    border: 1px solid #54585d;
+    padding: 7px 7px 2px;
+    background-color: #a1322e;
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.h_th{
+    border: 1px solid #c2c2c4;
+    padding-top: 5px;
     font-family: 'Lato', sans-serif;
 }
