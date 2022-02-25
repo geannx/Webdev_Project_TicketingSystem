@@ -48,7 +48,7 @@
             <label>Student ID: <?php echo $row['StudentID']; ?></label><br>
             <label>Subject: <?php echo $row['Subject']; ?></label><br>
         </div>
-    
+    <?php if(!$row2['Status'] = 'OPEN' ){?>
         <form action="freply_interface_inc.php" method="POST">
         <div class="text_box">
             <textarea class="text" name="MsgBody" placeholder="Your reply here..."></textarea>
@@ -57,6 +57,7 @@
             <button type="submit" formaction="freply_interface_inc.php" class="reply-button" value="reply">Reply to Ticket</button>
         </div>
         </form>
+    <?php } ?>
     </div>
 </body>
 
