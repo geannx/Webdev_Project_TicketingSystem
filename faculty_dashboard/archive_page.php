@@ -1,17 +1,16 @@
 <?php
-include_once 'faculty_sidebar.php';
+    include_once 'faculty_sidebar.php';
+    require '../dbh_inc.php';
 ?>
-            <div class="section">
+
+<div class="section">
                 <div class="nav">
-                    <h1>Reply to a Ticket</h1>
+                    <h1>Archive Page</h1>
                 </div>
             </div>
     </div>
         <div class="note">
-            <h5>Note: All tickets received is displayed here, you can reply anytime. You can also close the status of the ticket if it has already reached its final conclusion.</h5>
-            <form action="archive_page.php">
-                <button type="submit" class="archive_button">Archived Tickets</button>
-            </form>
+            <h5>Note: All tickets displayed here are archived and can no longer be replied to.</h5>
         </div>
 
     <div class="view-tickets2">
@@ -28,7 +27,7 @@ include_once 'faculty_sidebar.php';
 
                 include '../dbh_inc.php';
                 // statement to select all query
-                $sql = "SELECT * FROM ticket_details WHERE FacultyID = ?;";
+                $sql = "SELECT * FROM ticket_details WHERE FacultyID = ? AND Status='CLOSED';";
                 $stmt = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt, $sql);
                 mysqli_stmt_bind_param($stmt, "s", $_SESSION['FacultyID']);
