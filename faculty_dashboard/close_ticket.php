@@ -9,3 +9,5 @@
     mysqli_stmt_bind_param($stmt, "s", $_SESSION['ticketnum']) ;
     mysqli_stmt_execute($stmt);
 
+    header('location: freply_interface.php?ticketclosed=sucess');
+

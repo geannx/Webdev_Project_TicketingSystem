@@ -14,7 +14,7 @@
 ?>
     <div class="section">
         <div class="nav">
-            <h1>Reply to a Ticket</h1>
+            <h1>Ticket Details</h1>
         </div>
     </div>
     </div>
@@ -36,11 +36,20 @@
                 }
             ?>
             </div>        
+
         </div>
+        <!-- Checking if Status is Closed, and removes close ticket -->
+        <?php if($row['Status'] =='OPEN' ){?>
         <form action="close_ticket.php">
-        <button type="submit" class="closeticket-button" value="close_ticket">Close Ticket</button>
+            <button type="submit" class="closeticket-button" value="close_ticket">Close Ticket</button>
         </form>
+        <?php } ?>
+        <!-- Displaying ticket closed after pressing close ticket button -->
+        <?php if($_GET['ticketclosed'] == "success"){
+            echo "Ticket Closed";
+        }?>
     </div>
+    <!-- ticket details -->
     <div class="text_form">
         <div class="ticket-details">
             <h1>Ticket Details:</h1><br>
@@ -48,7 +57,8 @@
             <label>Student ID: <?php echo $row['StudentID']; ?></label><br>
             <label>Subject: <?php echo $row['Subject']; ?></label><br>
         </div>
-    <?php if(!$row2['Status'] = 'OPEN' ){?>
+    <!-- Removing Textbox if ticket is already closed -->
+    <?php if($row['Status'] == 'OPEN' ){?>
         <form action="freply_interface_inc.php" method="POST">
         <div class="text_box">
             <textarea class="text" name="MsgBody" placeholder="Your reply here..."></textarea>
@@ -57,7 +67,7 @@
             <button type="submit" formaction="freply_interface_inc.php" class="reply-button" value="reply">Reply to Ticket</button>
         </div>
         </form>
-    <?php } ?>
+    <?php } ?>  
     </div>
 </body>
 

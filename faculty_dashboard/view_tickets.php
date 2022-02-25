@@ -28,7 +28,7 @@ include_once 'faculty_sidebar.php';
 
                 include '../dbh_inc.php';
                 // statement to select all query
-                $sql = "SELECT * FROM ticket_details WHERE FacultyID = ?;";
+                $sql = "SELECT * FROM ticket_details WHERE FacultyID = ? AND Status = 'OPEN';";
                 $stmt = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt, $sql);
                 mysqli_stmt_bind_param($stmt, "s", $_SESSION['FacultyID']);
@@ -39,8 +39,8 @@ include_once 'faculty_sidebar.php';
                 while($row = mysqli_fetch_assoc($result)){ ?>
                     <tr>
                     <td class="td-ticket"><input class='ticket_id' type='submit' value='  <?php echo $row["ticket_number"]; ?>' name = 'ticketnum'></td>
-                    <td class="td-ticket">  <?php  echo $row["StudentID"]; ?> </td>
-                    <td class="td-ticket"> <?php echo $row["Subject"]; ?>  </td>
+                    <td class="td-ticket"><?php  echo $row["StudentID"]; ?> </td>
+                    <td class="td-ticket"><?php echo $row["Subject"]; ?>  </td>
                     <td class="td-ticket"><?php  echo $row["Status"]; ?></option>
             <?php  }  ?>
             </form>
