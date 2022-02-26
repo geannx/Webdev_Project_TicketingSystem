@@ -1,27 +1,27 @@
 <?php
 include_once 'faculty_sidebar.php';
 ?>
-            <div class="section">
-                <div class="nav">
-                    <h1>Reply to a Ticket</h1>
-                </div>
+        <div class="section">
+            <div class="nav">
+                <h1>Reply to a Ticket</h1>
             </div>
+        </div>
     </div>
         <div class="note">
             <h5>Note: All tickets received is displayed here, you can reply anytime. You can also close the status of the ticket if it has already reached its final conclusion.</h5>
             <form action="archive_page.php">
-                <button type="submit" class="archive_button">Archived Tickets</button>
+                <button type="submit" class="archive-button">Archived Tickets</button>
             </form>
         </div>
 
     <div class="view-tickets2">
         <table class="view-tickets">
             <!-- Display ticket data -->
-            <tr>
-                <th>Ticket Number</th>
-                <th>Student Number</th>
-                <th>Subject</th>
-                <th>Status</th>
+            <tr class="tr-header font-style">
+                <th>Ticket Number:</th>
+                <th>Student Number:</th>
+                <th>Subject:</th>
+                <th>Status:</th>
             </tr>
             <form action='freply_interface.php' method='POST' id="tickets-form"> 
             <?php 
@@ -37,11 +37,11 @@ include_once 'faculty_sidebar.php';
                 
                 // loop to show all tickets
                 while($row = mysqli_fetch_assoc($result)){ ?>
-                    <tr>
-                    <td class="td-ticket"><input class='ticket_id' type='submit' value='  <?php echo $row["ticket_number"]; ?>' name = 'ticketnum'></td>
-                    <td class="td-ticket"><?php  echo $row["StudentID"]; ?> </td>
+                    <tr class="tr-data font-style">
+                    <td class="td-ticket"><a class="td-ticketnum"href="freply_interface.php?ticketnum=<?php echo $row["ticket_number"]; ?>" name = 'ticketnum'><?php echo $row["ticket_number"]; ?></a></td>
+                    <td class="td-ticket"><?php  echo $row["StudentID"]; ?></td>
                     <td class="td-ticket"><?php echo $row["Subject"]; ?>  </td>
-                    <td class="td-ticket"><?php  echo $row["Status"]; ?></option>
+                    <td class="td-ticket"><?php  echo $row["Status"]; ?></td>
             <?php  }  ?>
             </form>
         </table>

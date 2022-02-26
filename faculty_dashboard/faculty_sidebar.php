@@ -53,14 +53,14 @@
                     <span class="item">View Classes</span>
                     </a>
                 </li>
+                <li><a href="flogout.php">
+                        <span class="icon"><i class = "fa fa-power-off" aria-hidden="true"> </i></span>
+                        <span class="Item">Logout</span></a>
+                </li>
             </ul>
             
         <div class="footer-buttons">
-            <ul>
-                <li><a href="flogout.php">
-                        <span class="icon"><i class = "fa fa-power-off" aria-hidden="true"> </i></span>
-                        <span class="Item">Logout</span></a></li>
-            </ul>
+      
         </div>
             <div class="footnote">
                 

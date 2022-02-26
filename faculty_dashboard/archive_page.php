@@ -16,7 +16,7 @@
     <div class="view-tickets2">
         <table class="view-tickets">
             <!-- Display ticket data -->
-            <tr>
+            <tr class="tr-header">
                 <th>Ticket Number</th>
                 <th>Student Number</th>
                 <th>Subject</th>
@@ -36,8 +36,8 @@
                 
                 // loop to show all tickets
                 while($row = mysqli_fetch_assoc($result)){ ?>
-                    <tr>
-                    <td class="td-ticket"><input class='ticket_id' type='submit' value='  <?php echo $row["ticket_number"]; ?>' name = 'ticketnum'></td>
+                    <tr class = "tr-data">
+                    <td class="td-ticket"><a class="td-ticketnum"href="freply_interface.php?ticketnum=<?php echo $row["ticket_number"]; ?>" name = 'ticketnum'><?php echo $row["ticket_number"]; ?></a></td>
                     <td class="td-ticket">  <?php  echo $row["StudentID"]; ?> </td>
                     <td class="td-ticket"> <?php echo $row["Subject"]; ?>  </td>
                     <td class="td-ticket"><?php  echo $row["Status"]; ?></option>

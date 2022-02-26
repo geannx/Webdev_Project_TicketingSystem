@@ -6,11 +6,11 @@
     $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?;";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $_POST['ticketnum'] );
+    mysqli_stmt_bind_param($stmt, "s", $_GET['ticketnum'] );
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
-    $_SESSION['ticketnum'] = $_POST['ticketnum'];
+    $_SESSION['ticketnum'] = $_GET['ticketnum'];
 ?>
     <div class="section">
         <div class="nav">
@@ -27,7 +27,7 @@
                 $sql2 = "SELECT * FROM ticket_details td JOIN ticket_messages tm ON td.ticket_number = tm.ticket_number WHERE td.ticket_number = ?";
                 $stmt2 = mysqli_stmt_init($conn);
                 mysqli_stmt_prepare($stmt2, $sql2 );
-                mysqli_stmt_bind_param($stmt2, "s", $_POST['ticketnum']);
+                mysqli_stmt_bind_param($stmt2, "s", $_GET['ticketnum']);
                 mysqli_stmt_execute($stmt2);
                 $result2 = mysqli_stmt_get_result($stmt2);
                 //loop to display website history
@@ -45,9 +45,7 @@
         </form>
         <?php } ?>
         <!-- Displaying ticket closed after pressing close ticket button -->
-        <?php if($_GET['ticketclosed'] == "success"){
-            echo "Ticket Closed";
-        }?>
+       
     </div>
     <!-- ticket details -->
     <div class="text_form">

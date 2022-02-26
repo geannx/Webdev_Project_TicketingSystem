@@ -9,6 +9,39 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.button-enroll{
+    background-color: #771515;
+    color: rgb(241, 237, 237);
+    font-size: 22px;
+    font-family: 'Lato', sans-serif ;
+    border: 1px solid rgb(53, 18, 18);
+    padding: 2px 20px;
+    cursor: pointer;
+    position: relative;
+    left: 1120px;
+    transition-duration: .20s;
+}
+
+.button-enroll:hover{
+    background-color: rgb(156, 51, 51);
+}
+
+.font-style{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;    
+    font-weight: bold;
+}
+
+.font-style2{
+    font-family: 'Yeseva One', sans-serif;
+    font-size: 20px;    
+    font-weight: bold;
+}
+
+.nav{
+    font-family: 'Yeseva One', sans-serif;
+    font-weight: bolder;
+}
 body{
     background: #f5f6fa;
     overflow-y: hidden;
@@ -33,7 +66,6 @@ header{
     width: 225px;
     height: 100%;
     padding: 20px 0;
-    transition: all 0.5s ease;
 }
 
 .sidebar .logo{
@@ -47,7 +79,7 @@ h2{
 }
 
 h1{
-    font-family:'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Yeseva One', Tahoma, Geneva, Verdana, sans-serif;
 }
 
  img{
@@ -82,8 +114,8 @@ h1{
 }
 
 
-.sidebar ul li a:hover .icon,
-ul li a.active .icon{
+li:hover .icon,
+li:hover{
     color: rgb(243, 225, 67);
 
 }
@@ -206,15 +238,28 @@ select{
 
  th, td {
      text-align: center;
-    margin-top: -10px;
-    padding-top: -200px;
-    padding-bottom: 0px;
-    font-size: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
-
+    margin: 0%;
     border: 1px solid black;
 
+ }
+
+ .tr-data{
+     font-size: 18px;
+     background-color: #dfe0f5;
+     transition-duration: .15s;
+ }
+
+ .tr-data:hover{
+    background-color: #c1c2d6;
+ }
+
+ .tr-header{
+     font-size: 20px;
+     color:#fffcde;
+     background-color: rgb(119, 36, 36);
+ }
+ .td-ticketnum{
+    color: rgb(85, 78, 97)
  }
 
  .ticket_id{
@@ -266,7 +311,7 @@ select{
     margin-top: 50px;
     margin-left: 300px;
    background-color: #f8f8f8;
-    width: 1500px;
+    width: 1320px;
     height: 600px;
     overflow-y: scroll;
 }
@@ -282,4 +327,17 @@ select{
 .td-ticket{
     width: 10px;
     height: -5px;
+}
+
+.archive-button{
+    position:relative;
+    left: 1120px;
+    top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color:rgb(241, 237, 237);
+    border: .5px solid rgb(53, 18, 18);
+    background-color: rgb(136, 43, 43);
+    padding: 2px 20px;
+    cursor: pointer;
 }
