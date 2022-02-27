@@ -351,3 +351,27 @@ ul li a.active::before{
     padding-top: 5px;
     font-family: 'Lato', sans-serif;
 }
+
+.ticket_reply_container_closed{
+    position: absolute;
+    top: 350px;
+    left: 900px;
+    background: #ffffce;
+    height: 200px;
+    width: 250px;
+    border: solid rgb(238, 199, 69);
+    border-radius: 10px;
+}
+
+.text_form_closed{
+    display: block;
+    margin: 35px 20px 100px;
+    text-align: left;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.td_cl{
+    font-weight: normal;
+}
