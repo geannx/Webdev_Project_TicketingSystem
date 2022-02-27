@@ -9,8 +9,10 @@
         </div>
     </div>
         <div class="note">
+            <!-- Buttons for enrollment -->
             <h1>Class ID: <?php echo $_GET['class_id'];?></h1>
-            <form action="enroll.php"><button class="button-enroll" type="submit">Enroll a student</button>
+            <a href="enroll.php?class_id=<?php echo $_GET['class_id']; ?>&status=enroll&process=pending" class="button-enroll red-button" type="submit">Enroll a Student</a>
+            <a href="enroll.php?class_id=<?php echo $_GET['class_id']; ?>&status=remove&process=pending" class="button-remove red-button" type="submit">Remove a Student</a>
         </div>
 
     <div class="view-tickets2">

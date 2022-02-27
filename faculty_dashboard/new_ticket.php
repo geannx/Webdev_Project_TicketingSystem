@@ -14,9 +14,9 @@ include_once 'faculty_sidebar.php';
     
         <form action="new_ticket_inc.php" method="POST">
             
-        <div class="select">
-        <select name="StudentID" id="faculty">
-        <option selected disabled>----------</option>
+    <div class="select">
+        <select name="StudentID" id="faculty" required>
+        <option value="">----------</option>
         <?php
             require '../dbh_inc.php';
             $sql = "SELECT StudentID FROM class_list cd JOIN class_details cl ON cl.class_id = cd.class_id WHERE class_head = ?" ;
