@@ -43,21 +43,21 @@
                 if(!$result1){
                     echo "Empty Conversation.";
                 }else{
-                    while($result2 = mysqli_fetch_assoc($result1)){
-                        echo "<label style = 'font-weight: bold'><br>Sender: </label>" .
-                            $result2['SenderID'] . "<label style = 'font-weight: bold'><br>Date:  </label>". 
-                            date("F d, Y", strtotime($result2['TimeStamp'])) .
-                            "<label style = 'font-weight: bold'><br>Time: </label>" . date("H:i", strtotime($result2['TimeStamp'])) . '<br>' .
-                            '<br>' . $result2['MsgBody'] .'<br><br>';
-                    }
-                }
-            ?>
+                    while($result2 = mysqli_fetch_assoc($result1)){ ?>
+                    <p id = "ticket_sdt"> <br>Sender: 
+                    <?php echo $result2['SenderID'] ?>
+                    <br>Date: <?php echo date("F d, Y", strtotime($result2['TimeStamp'])) ?>   
+                    <br>Time: <?php echo date("H:i", strtotime($result2['TimeStamp'])) ?> </p>
+                    <p id = "ticket_body"></br></br>&emsp;<?php echo $result2['MsgBody'] .'<br><br>'; ?></p>     
+                    <?php }
+                } ?>
             </div>        
         </div>
     </div>
 
     <!-- To get the faculty name addresed in the ticket -->
     <?php
+        if(strtolower($row['Status']) == 'open'){
         $db_FacultyID = $row['FacultyID'];
         $fname_sql = "SELECT FacultyName from faculty WHERE FacultyID = '$db_FacultyID';";
         $fname_result = mysqli_query($conn,$fname_sql);
@@ -65,10 +65,8 @@
         while($fname_row = mysqli_fetch_assoc($fname_result)){
             $fname_php = $fname_row['FacultyName'];
         }
-        
-        if(strtolower($row['Status']) == 'open'){
     ?>
-
+        
     <!-- Write Reply Section -->
     <div class = "ticket_reply_container">
         <div class="text_form">
@@ -78,11 +76,11 @@
                 <label class="ticket_details">Faculty Name: <?php echo $fname_php ?></label><br>
                 <label class="ticket_details">Subject: <?php echo $row['Subject']; ?></label><br>
             </div>
-            
+                
             <!-- Text Area -->
             <form action="sreply_interface_inc.php" method="POST">
                 <div class="text_box">
-                    <textarea class="tb_text" name="MsgBody" placeholder="Your reply here..." required></textarea>
+                    <textarea class="tb_text" name="MsgBody" placeholder="Your reply here..."></textarea>
                 </div>
 
                 <!-- Reply Button -->
@@ -92,24 +90,7 @@
             </form>
         </div>
     </div>
-    <?php
-        }
-        else{ ?>
-            <div class = "ticket_reply_container_closed">
-                <div class="text_form_closed">
-                    <div>
-                        <h2 id="td_lb">Ticket Details:</h2></br>
-                        <label class="ticket_details_closed">Ticket Number: </label>
-                        <label class="td_cl"><?php echo $row['ticket_number'];?></label><br>
-                        <label class="ticket_details_closed">Subject:       </label>
-                        <label class="td_cl"><?php echo $row['Subject']; ?></label><br>
-                        <label class="ticket_details_closed">Recipient Faculty:  </label>
-                        <label class="td_cl"></br><?php echo $fname_php ?></label><br>
-                    </div>
-                </div>
-            </div>
-        <?php 
-        } ?>
+    <?php } ?>
 </body>
 
 </html>

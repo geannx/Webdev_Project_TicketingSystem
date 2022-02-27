@@ -21,5 +21,7 @@
     mysqli_stmt_bind_param($stmt2, "iss", $ticketNumber, $_SESSION['StudentID'], $_POST['MsgBody']);
     mysqli_stmt_execute($stmt2);
 
+    // Return to history.php for ticket viewing
     header("Location: history.php?ticket=created");
 ?>
+    
