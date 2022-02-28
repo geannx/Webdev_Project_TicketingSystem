@@ -9,3 +9,8 @@
     mysqli_stmt_bind_param($stmt, "s", $_SESSION['ticketnum']) ;
     mysqli_stmt_execute($stmt);
 ?>
+<div class="text_form">
+        <div class="ticket-details">
+            <h1>Ticket Closed!</h1><br>
+        </div>
+</div>
