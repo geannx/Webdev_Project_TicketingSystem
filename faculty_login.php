@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
 
-<<<<<<< Updated upstream
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-=======
     <link href="login_style.css" rel="stylesheet">
->>>>>>> Stashed changes
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
