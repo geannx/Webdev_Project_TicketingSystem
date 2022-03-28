@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 
+<<<<<<< Updated upstream
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+=======
+    <link href="login_style.css" rel="stylesheet">
+>>>>>>> Stashed changes
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,14 +65,20 @@
     </style>
 </head>
     <body>
+        <div class="header">
+            <img src="img/puplogo.png" alt="PUP Logo">
+            <h1 class="h1-header noselect">PUPLMS</h1>
+        </div>
+        
         <div class="input-form">
-        <img src="puplogo.png" alt="pup logo" width="100">
-        <h1>PUP Ticketing System<br>Faculty Login</h1>
-        <form action="faculty_login_inc.php" method="POST">
-            <input class="username" name="username"  type="text" placeholder="Faculty ID" required><br>
-            <input class="password" name="password" type="password" placeholder="Password" required><br>
-            <input class = "button" type="submit" name="submit" value="Login">
-        </form>
+            <h1 class="h1-body">Faculty Login</h1>
+            <h6>Welcome PUPian! Enter your details to continue.</h6>
+            <form action="faculty_login_inc.php" method="POST" id="login-form">
+                <input class="username" name="username"  type="text" placeholder="Faculty ID" required><br>
+                <input class="password" name="password" type="password" placeholder="Password" required><br>
+            </form>
+            <a href="#" class="forgot-password">Forgot your password?</a><br>
+            <button form="login-form" class="button" type="submit" name="submit" value="Login">Login</button>
         </div>
     </body>
 </html>

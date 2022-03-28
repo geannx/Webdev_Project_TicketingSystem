@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+body{
+    background-color: rgb(238, 238, 238);
+    height: 100%;
+    overflow: hidden;
+}
+/* Pup Logo */
+
+img{
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
+    align-self: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+}
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.h1-header{
+    font-weight: 100;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 32px;
+    color: rgb(147,38,38);
+}
+
+.h1-body{
+    text-align: left;
+}
+
+a {
+    color: black;
+}
+h2{
+    font-size: 45px;
+    text-align: center;
+    font-weight: normal;
+}
+
+h6{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+}
+
+.input-form{
+    font-family: 'Quicksand', sans-serif;
+    align-content: left;
+    margin-left: 20%;
+}
+
+input{
+    font-family: 'Quicksand', sans-serif;
+    border-color: rgb(147,38,38);
+    border-radius: 5px;
+    margin-top: 10px;
+    align-items: center;
+    font-size: 30px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 30px;
+    line-height: 3;
+}
+
+.button{
+    font-family:  'Quicksand', sans-serif;
+    font-size: 16;
+    padding: 5px 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(147,38,38);
+    transition-duration: .35s;
+}
+
+.button:hover{
+    background-color: rgb(94, 25, 25);
+}
+
