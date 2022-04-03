@@ -6,25 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUP Ticketing System Login</title>
-<<<<<<< Updated upstream
-    <style>
-        body{
-            font-family:  "Times New Roman", sans-serif;
-            background-image: url('pupbg3.png');
-            background-size: cover;
-            overflow:hidden;
-            margin:0%
-        }
-        
-        h1{
-            
-            text-align: center;
-            font-size: 40px;
-            color: rgb(126, 14, 14);
-            text-shadow: 2px 2px #ffffff;
-        }
-=======
->>>>>>> Stashed changes
 
 </head>
 <body>
