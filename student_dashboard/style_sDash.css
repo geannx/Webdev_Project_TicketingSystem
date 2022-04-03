@@ -7,6 +7,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body{
+    background: #f5f6fa;
+    overflow-y:  hidden;
+}
+
 .sidebar{
     background: #771515;
     position: fixed;
@@ -18,12 +23,12 @@
     transition: all 0.5s ease;
 }
 
-.wrapper .sidebar .profile{
+.profile{
     margin-bottom: 30px;
     text-align: left;
 }
 
-.wrapper .sidebar .profile img{
+.profile img{
     float: left;
     width: 50px;
     height: 50px;
@@ -32,20 +37,20 @@
     margin-top: 3%;
 }
 
-.wrapper .sidebar .profile #student_name{
+.profile #student_name{
     vertical-align: middle;
     font-size: 15px;
     color: #dee4ec;
 }
 
-.wrapper .sidebar .profile #student_id{
+.profile #student_id{
     font-size: 14px;
     color: #dee4ec;
     vertical-align: text-bottom;
     margin-top: 1%;
 }
 
-.wrapper .sidebar ul li a{
+.sidebar ul li a{
     display: block;
     padding: 13px 30px;
     border-bottom: 1px solid #a1322e;
@@ -62,20 +67,20 @@
     display: inline-block;
 }
 
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
+ ul li a:hover,
+ ul li a.active{
     color: rgb(243, 225, 67);
     background: #a1322e;
     border-right: 2px solid #771515;
 }
 
-.wrapper .sidebar ul li a:hover .smenu_icon
-.wrapper .sidebar ul li a.active .smenu_icon{
+ ul li a:hover .smenu_icon
+ ul li a.active .smenu_icon{
     color: rgb(243, 225, 67);
 }
 
-.wrapper .sidebar ul li a:hover::before,
-.wrapper .sidebar ul li a.active::before{
+ul li a:hover::before,
+ul li a.active::before{
     display: block;
 }
 
@@ -85,18 +90,18 @@
     font-size: 10px;
     position: fixed;
     bottom: 0;
-    width: 15%
+    width: 11%;
 }
 
-.wrapper .section{
+.section{
     width: calc(100%-225px);
     margin-left: 225px;
 }
 
-.wrapper .section .greetings{
+.greetings{
     background-color: rgb(238, 199, 69);
     height: 70px;
-    width: 12200px;
+    width: 100vw;
     padding-left: 5%;
     align-items: center;
     display: table-cell;
@@ -110,6 +115,13 @@
     text-shadow: 3px 1px white;
     font-family: 'Yeseva One', cursive;
     text-indent: 15px;
+}
+
+#note{
+    padding-top: 10px;
+    padding-left: 25px;
+    width: 520px;
+    font-family: 'Lato', sans-serif;
 }
 
 #background{
@@ -131,6 +143,25 @@
     color: black;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+}
+
+#Lsubject{
+    color: black;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+#t_subject{
+    vertical-align: middle;
+    margin-left: 5px;
+    min-width: 302px;
+    max-height: 22px;
+    resize: none;
+    padding: 2px 5px;
+    color: black;
+    font-family: 'Lato', sans-serif;
 }
 
 .ticket_form .select{
@@ -155,16 +186,10 @@
     height: 300px;
     color: gray;
     font-family: 'Lato', sans-serif;
+    padding: 20px 25px 25px;
 }
 
-#note{
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 450px;
-    font-family: 'Lato', sans-serif;
-}
-
-.ticket_form .button{
+.button{
     position: absolute;
     top: 42%;
     background-color: #a1322e;
@@ -175,4 +200,178 @@
     padding: 10px 10px 10px;
     margin-left: 610px;
     font-family: 'Lato', sans-serif;
+}
+
+.container{
+    padding-top: 25px;
+    margin-left: 300px;
+    margin-right: 500px;
+}
+
+.table-history{
+    width: 1000px;
+}
+
+/* sreply_interface.php */
+
+#ticket_rh{
+    color: #771515;
+    margin: 40px 35px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    text-shadow: 1px 1px white;
+}
+
+.ticket-history-bg{
+    position: absolute;
+    margin: 20px 250px;
+    padding: 10px;
+    background: rgb(255, 214, 214);
+    height: 700px;
+    width: 600px;
+    border: solid #771515;
+    border-radius: 10px;
+}
+
+.ticket-history-inner{
+    border: solid 3px #771515;
+    margin: 30px 30px 30px;
+    background: #fffcde;
+    width: 513px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.ticket-history-object{
+    color:rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#ticket_sdt{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#ticket_body{
+    color: #383a3d;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ticket_reply_container{
+    position: absolute;
+    top: 230px;
+    left: 900px;
+    background: #fffcde;
+    height: 400px;
+    width: 700px;
+    border: solid rgb(238, 199, 69);
+    border-radius: 10px;
+}
+
+.text_form {
+    margin: 20px 30px;
+    text-align: left;
+}
+
+#td_lb{
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+}
+
+.ticket_details{
+    margin-left: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+}
+
+.text_box{
+    position: relative;
+    padding-top: 5px;
+}
+
+.tb_text{
+    resize: none;
+    margin-left: 2px;
+    border: 2px solid rgb(238, 199, 69);
+    border-radius: 10px;
+    width: 637px;
+    height: 245px;
+    color: gray;
+    font-family: 'Lato', sans-serif;
+    padding: 20px 20px 20px;
+    outline: none;
+}
+
+.reply_button{
+    position: absolute;
+    top: 410px;
+    left: 0%;
+    background-color: #a1322e;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-weight: 200;
+    cursor: pointer;
+    padding: 10px 10px 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* history.php */
+
+.table-history{
+    border-collapse: collapse;
+    width: 81vw;
+    background-color: #dee4ec;
+}
+
+.tablehistory, tr:nth-child(even){
+    background-color: #d4dde9;
+}
+
+.table-history tr:hover{
+    background-color: #bcbfc4;
+}
+
+.tb_columns{
+    border: 1px solid #54585d;
+    padding: 7px 7px 2px;
+    background-color: #a1322e;
+    color: white;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.h_th{
+    border: 1px solid #c2c2c4;
+    padding-top: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.ticket_reply_container_closed{
+    position: absolute;
+    top: 350px;
+    left: 900px;
+    background: #ffffce;
+    height: 200px;
+    width: 250px;
+    border: solid rgb(238, 199, 69);
+    border-radius: 10px;
+}
+
+.text_form_closed{
+    display: block;
+    margin: 35px 20px 100px;
+    text-align: left;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.td_cl{
+    font-weight: normal;
 }
