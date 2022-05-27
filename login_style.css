@@ -18,6 +18,7 @@ html{
 body{
     background-color: #ffffff;
     height: 100%;
+    width: 100%;
     overflow: hidden;
     margin: 0;
 }
@@ -28,16 +29,36 @@ body{
     flex-direction: column;
     height: 10%;
     width: 50%;
-    
 }
 
 
 .header{
     display: inline-flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    margin: 20px;
 }
 
+.p-header{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin:  0px auto auto 20px;
+    padding-top: auto;
+    font-size: 32px;
+    color: rgb(147,38,38);
+}
+
+.header img{
+  display: inline-flex;
+  width: 40px;
+  margin: 0px 0px auto 30px;
+
+}
 
 .input-form{
+ 
     display: flex;
     flex-direction: column;
     align-self: flex-start;
@@ -81,31 +102,11 @@ a{
 
 
 /*  */
-img{
-    display: inline-block;
-    width: 40px;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-p{
-    display: inline-block;
-}
+
 
 h1{
-    margin: 0 0 0 0px;
+    margin: 0px 0px 0px 0px;
     font-family: 'Quicksand', sans-serif;
-}
-
-.p-header{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    margin-top: 30px;
-    margin-left: 20px;
-    font-size: 40px;
-    color: rgb(147,38,38);
-}
-
-h1{
     font-size: 40px;
     text-align: left;
 }
@@ -131,7 +132,7 @@ input{
     font-family: 'Quicksand', sans-serif;
     border-color: rgb(147,38,38);
     border-radius: 5px;
-    width: 100%;
+    width: 98%;
     margin-top: 10px;
     align-items: center;
     font-size: 30px;

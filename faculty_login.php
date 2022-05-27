@@ -9,13 +9,13 @@
     <title>Faculty Login</title>
 </head>
     <body>
-        
         <div class="side-color"></div>
         <div class="flexy-parent">
             <div class="header">
-                        <p><img src="img/puplogo.png" alt="PUP Logo"></p>
-                        <p class="p-header noselect">PUPLMS</p>
-            </div>
+                <img src="img/puplogo.png" alt="PUP Logo">    
+            
+            <p class="p-header noselect">PUPLMS</p>
+        </div>
             <div class="input-form">
                     <h1 class="h1-body">Faculty Login</h1>
                     <h6>Welcome PUPian! Enter your details to continue.</h6>
