@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php 
-        require '../dbh_inc.php';
+        require '../dbh.inc.php';
          session_start();
          if(!isset($_SESSION['StudentID'])){
              header('location: ../faculty_login.php?error=invalidaccess');

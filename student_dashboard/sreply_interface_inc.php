@@ -1,6 +1,6 @@
 <?php
     include 'student_sidebar.php';
-    require '../dbh_inc.php';
+    require '../dbh.inc.php';
 
     
     $Body = $_POST["MsgBody"];

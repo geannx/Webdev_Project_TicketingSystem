@@ -18,4 +18,3 @@
     //     header('location: faculty_dashboard.php');
     //     exit();
     // }
-}

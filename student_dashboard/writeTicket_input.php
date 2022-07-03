@@ -1,6 +1,6 @@
 <?php
     include_once 'student_sidebar.php';
-    require '../dbh_inc.php';
+    require '../dbh.inc.php';
     // Getting last ticket number in database to create new ticket number
     $sql_getLastTicket = "SELECT ticket_number FROM ticket_details ORDER BY ticket_number DESC;";
     $query = mysqli_query($conn, $sql_getLastTicket);

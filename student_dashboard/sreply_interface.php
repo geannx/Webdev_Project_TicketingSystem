@@ -1,6 +1,6 @@
 <?php
     include 'student_sidebar.php';
-    require '../dbh_inc.php';
+    require '../dbh.inc.php';
     $sql = "SELECT * FROM ticket_details WHERE ticket_number = ?;";
     $stmt = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt, $sql);

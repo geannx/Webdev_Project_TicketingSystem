@@ -19,7 +19,7 @@
             <div class="input-form">
                     <h1 class="h1-body">Faculty Login</h1>
                     <h6>Welcome PUPian! Enter your details to continue.</h6>
-                    <form action="faculty_login_inc.php" method="POST" id="login-form">
+                    <form action="faculty_login.inc.php" method="POST" id="login-form">
                         <input class="username" name="username"  type="text" placeholder="Faculty ID"><br>
                         <input class="password" name="password" type="password" placeholder="Password"><br>
                     </form>
