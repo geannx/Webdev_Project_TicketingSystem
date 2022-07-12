@@ -9,7 +9,7 @@
         body{
             font-family:  "Times New Roman", sans-serif;
             background-image: url('pupbg3.png');
-            background-size: cover;
+            background-size: cover; 
             overflow:hidden;
             margin:0%
         }
@@ -109,7 +109,7 @@
         <form  action="student_login.php">
             <input id="student-button" type="submit" value="Student"/>
         </form>
-        <form  action="faculty_login.php">
+        <form action="faculty_login.php">
             <input id="faculty-button" type="submit" value="Faculty"/>
         </form>
         </div>
