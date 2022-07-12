@@ -25,14 +25,13 @@
     function loginFaculty($conn, $username, $pwd){
         $uidExists = uidExists($conn, $username);
         if($uidExists === false){
-            echo $uidExists['FacultyID'];
             header('location: faculty_login.php?error=usernotexists');
             exit();
         }
         $pwdHashed = $uidExists['FacultyPwd'];
 
         $pwd_check = password_verify($pwd, $pwdHashed);
-        
+
         if($pwd_check){
             session_start();
             $_SESSION['FacultyID'] = $uidExists['FacultyID'];
@@ -40,8 +39,8 @@
             header('location: faculty_dashboard/faculty_dashboard.php');
             exit();
         }else{
-            echo $pwdHashed;
-            // header('location: faculty_login.php?error=wronglogin');
+        
+            header('location: faculty_login.php?error=wronglogin');
             exit();
         }
     }

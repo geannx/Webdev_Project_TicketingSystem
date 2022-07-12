@@ -28,12 +28,14 @@
             header('location: student_login.php?error=usernotexists');
             exit();
         }
-        $pwdHashed = $uidExists['StudentPassword'];
+        $pwdHashed = $uidExists['StudentPwd'];
+
+        $pwd_check = password_verify($pwd, $pwdHashed);
         
         if($pwd === $pwdHashed){
             session_start();
             $_SESSION['StudentID'] = $uidExists['StudentID'];
-            $_SESSION['StudentPassword'] = $uidExists['StudentPassword'];
+            $_SESSION['StudentPassword'] = $uidExists['StudentPwd'];
             header('location: student_dashboard/student_dashboard.php');
             exit();
         }else{
@@ -42,7 +44,7 @@
         }
     
     }
-
+    
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $pwd = $_POST['password'];
