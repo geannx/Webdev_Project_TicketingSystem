@@ -9,7 +9,7 @@ function facultyRegister($conn, $f_id, $f_name, $f_email, $f_department,  $f_pas
     }
     mysqli_stmt_bind_param($stmt, "sssss", $f_id, $f_name, $f_email, $f_department, $f_pass);
     mysqli_stmt_execute($stmt);
-    header('location: faculty_register_success.php');
+  //  header('location: faculty_register_success.php');
 }
 
 function fIDExists($conn, $f_id, $f_name, $f_email, $f_department, $f_pass){
@@ -30,12 +30,12 @@ function fIDExists($conn, $f_id, $f_name, $f_email, $f_department, $f_pass){
         exit();
     }
     else{
-        facultyRegister($conn, $f_id, $f_name, $f_email, $f_department, $f_pass);
+        facultyRegister($conn, $f_id, $f_name, $f_email, $f_department, $f_pass);   
     }
 }
 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['register'])){
     $f_id = $_POST['FacultyID'];
     $f_fname = $_POST['f_fname'];
     $f_lname = $_POST['f_lname'];
@@ -48,5 +48,5 @@ if(isset($_POST['submit'])){
     
 
     require 'dbh_inc.php';
-    facultyRegister($conn, $f_id, $f_name, $f_email, $f_department, $password_encryption);
+    fIDExists($conn, $f_id, $f_name, $f_email, $f_department, $password_encryption);
 }
