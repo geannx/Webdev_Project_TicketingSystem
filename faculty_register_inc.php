@@ -9,7 +9,7 @@ function facultyRegister($conn, $f_id, $f_name, $f_email, $f_department,  $f_pas
     }
     mysqli_stmt_bind_param($stmt, "sssss", $f_id, $f_name, $f_email, $f_department, $f_pass);
     mysqli_stmt_execute($stmt);
-  //  header('location: faculty_register_success.php');
+    header('location: faculty_register_success.php');
 }
 
 function fIDExists($conn, $f_id, $f_name, $f_email, $f_department, $f_pass){

@@ -23,7 +23,7 @@
             <input class="lname" name="f_lname" id="f_lname" type="text" placeholder="Last Name" required><br>
             <input class="f_department" name="f_department" id="f_department" type="text" placeholder="Faculty Department" required><br>
             <input class="email" name="facultyEmail" id="facultyEmail" type="text" placeholder="Faculty Email" required><br>
-            <input class="password" name="f_password" type="f_password" placeholder="Password" required><br>
+            <input class="password" name="f_password" type="password" placeholder="Password" required><br>
             <input class="button" type="submit" name="register" value="Register">
         </form>
         </div>
