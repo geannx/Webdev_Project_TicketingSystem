@@ -18,9 +18,10 @@
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Faculty Login</h1>
         <form action="faculty_login_inc.php" method="POST">
-            <input class="username" name="username"  type="text" placeholder="Faculty ID" required><br>
-            <input class="password" name="password" type="password" placeholder="Password" required><br>
-            <input class = "button" type="submit" name="submit" value="Login">
+            <input class="username" name="username"  type="text" placeholder="Faculty ID" ><br>
+            <input class="password" name="password" type="password" placeholder="Password" ><br>
+            <input class = "button" type="submit" name="submit" value="Login"><br>
+            <input class = "button" type="submit" name="register" value="Register">
         </form>
         </div>
     </body>

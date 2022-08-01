@@ -52,6 +52,12 @@
         require 'dbh_inc.php';
         loginFaculty($conn, $username, $pwd);
     }
+    else if(isset($_POST['register'])){
+        header('location: faculty_register.php');
+        exit();
+
+        require 'dbh_inc.php';
+    }
     else{
         header('location: faculty_login.php?error=invalidentry');
     }
