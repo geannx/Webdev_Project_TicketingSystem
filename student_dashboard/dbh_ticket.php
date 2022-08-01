@@ -1,7 +1,6 @@
 <?php
-// This code is for database connection
 
-$serverName = "localhost:3306";
+$serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
 $dBName = "ticketingsystem";

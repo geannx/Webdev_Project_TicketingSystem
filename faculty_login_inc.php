@@ -29,14 +29,17 @@
             exit();
         }
         $pwdHashed = $uidExists['FacultyPwd'];
-        
-        if($pwd === $pwdHashed){
+
+        $pwd_check = password_verify($pwd, $pwdHashed);
+
+        if($pwd_check){
             session_start();
-            $_SESSION['FacultyName'] = $uidExists['FacultyName'];
+            $_SESSION['FacultyID'] = $uidExists['FacultyID'];
             $_SESSION['FacultyPwd'] = $uidExists['FacultyPwd'];
-            header('location: faculty-dashboard/fDashboard.php');
+            header('location: faculty_dashboard/faculty_dashboard.php');
             exit();
         }else{
+        
             header('location: faculty_login.php?error=wronglogin');
             exit();
         }
@@ -48,6 +51,12 @@
 
         require 'dbh_inc.php';
         loginFaculty($conn, $username, $pwd);
+    }
+    else if(isset($_POST['register'])){
+        header('location: faculty_register.php');
+        exit();
+
+        require 'dbh_inc.php';
     }
     else{
         header('location: faculty_login.php?error=invalidentry');

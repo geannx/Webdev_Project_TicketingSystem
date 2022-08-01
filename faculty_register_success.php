@@ -8,18 +8,17 @@
     <link href="style.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login</title>
+    <title>Faculty Register</title>
 
 </head>
     <body>
         <div class="input-form">
         <img src="puplogo.png" alt="pup logo" width="100">
-        <h1>PUP Ticketing System<br>Student Login</h1>
+        <h1>PUP Ticketing System<br>Faculty Register</h1>
         
-        <form action="student_login_inc.php" method="POST">
-            <input class="username" name="username" id="username" type="text" placeholder="Student ID" required><br>
-            <input class="password" name="password" id="password" type="password" placeholder="password"><br>
-            <input class = "button" type="submit" name="submit" value="Login">
+        <form action="" method="">
+            <h1> We have successfully received your application! <h1>
+                <h1> Please wait for a confirmation email <br> from us for further instructions. <h1>
         </form>
         </div>
     </body>
