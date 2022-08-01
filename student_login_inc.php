@@ -54,6 +54,10 @@
         loginStudent($conn, $username, $pwd);
     
     }
+    else if (isset($_POST['register'])){
+        header('location: student_register.php');
+            exit();
+    }
     else{
         header('location: student_login.php?error=invalidentry');
     }

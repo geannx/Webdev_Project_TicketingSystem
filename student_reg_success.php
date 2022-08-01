@@ -16,11 +16,9 @@
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Student Login</h1>
         
-        <form action="student_login_inc.php" method="POST">
-            <input class="username" name="username" id="username" type="text" placeholder="Student ID"><br>
-            <input class="password" name="password" id="password" type="password" placeholder="password"><br>
-            <input class = "button" type="submit" name="submit" value="Login"><br>
-            <input class = "button" type="submit" name="register" value ="Register"> 
+        <form action="" method="">
+            <h1> We have successfully received your application! <h1>
+                <h1> Please wait for a confirmation email <br> from us for further instructions. <h1>
         </form>
         </div>
     </body>

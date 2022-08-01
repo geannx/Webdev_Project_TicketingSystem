@@ -16,11 +16,13 @@
         <img src="puplogo.png" alt="pup logo" width="100">
         <h1>PUP Ticketing System<br>Student Login</h1>
         
-        <form action="student_login_inc.php" method="POST">
-            <input class="username" name="username" id="username" type="text" placeholder="Student ID"><br>
-            <input class="password" name="password" id="password" type="password" placeholder="password"><br>
-            <input class = "button" type="submit" name="submit" value="Login"><br>
-            <input class = "button" type="submit" name="register" value ="Register"> 
+        <form action="student_register_inc.php" method="POST">
+            <input class="StudentID" name="StudentID" id="StudentID" type="text" placeholder="Student ID" required><br>
+            <input class="StudentName" name="st_Fname" id="st_Fname" type="text" placeholder="First Name" required><br>
+            <input class="StudentName" name="st_Lname" id="st_Lname" type="text" placeholder="Last Name" required><br>
+            <input class="StudentEmail" name="studentEmail" id="studentEmail" type="text" placeholder="Student Email" required><br>
+            <input class="password" name="st_password" id="password" type="password" placeholder="Password" required><br>
+            <input class ="button" type="submit" name="submit" value="Submit"><br> 
         </form>
         </div>
     </body>
