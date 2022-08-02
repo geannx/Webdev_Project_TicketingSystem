@@ -32,7 +32,7 @@
 
         $pwd_check = password_verify($pwd, $pwdHashed);
         
-        if($pwd === $pwdHashed){
+        if($pwd_check){
             session_start();
             $_SESSION['StudentID'] = $uidExists['StudentID'];
             $_SESSION['StudentPassword'] = $uidExists['StudentPwd'];

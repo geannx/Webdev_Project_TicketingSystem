@@ -1,6 +1,6 @@
 <?php
 
-$serverName = "localhost";
+$serverName = "localhost:3306";
 $dBUsername = "root";
 $dBPassword = "";
 $dBName = "ticketingsystem";
